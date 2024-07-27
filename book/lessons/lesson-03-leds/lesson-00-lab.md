@@ -1,1 +1,0 @@
-# Lab: Simulating a Stoplight

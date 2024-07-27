@@ -1,1 +1,0 @@
-Lab: Creating Custom Colors with an RGB LED
