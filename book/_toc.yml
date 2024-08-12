@@ -1,0 +1,121 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: 'Lesson 0: Introduction to the BBC micro:bit'
+    chapters:
+      - file: lessons/lesson-00-introduction/00-introduction
+      - file: lessons/lesson-00-introduction/01-objectives
+      - file: lessons/lesson-00-introduction/02-materials
+      - file: lessons/lesson-00-introduction/03-opener
+      - file: lessons/lesson-00-introduction/04-lesson-00-intro
+        sections:
+        - file: lessons/lesson-00-introduction/04-lesson-01-microbit-parts
+        - file: lessons/lesson-00-introduction/04-lesson-02-connecting
+        - file: lessons/lesson-00-introduction/04-lesson-03-makecode
+        - file: lessons/lesson-00-introduction/04-lesson-04-running-code
+      - file: lessons/lesson-00-introduction/05-lab
+      - file: lessons/lesson-00-introduction/06-vocabulary
+      - file: lessons/lesson-00-introduction/07-resources
+  - caption: "Lesson 1: The micro:bit Display"
+    chapters:
+      - file: lessons/lesson-01-display/00-introduction
+      - file: lessons/lesson-01-display/01-objectives
+      - file: lessons/lesson-01-display/02-materials
+      - file: lessons/lesson-01-display/03-opener
+      - file: lessons/lesson-01-display/04-lesson-00-intro
+        sections:
+        - file: lessons/lesson-01-display/04-lesson-01-strings
+        - file: lessons/lesson-01-display/04-lesson-02-display-strings
+        - file: lessons/lesson-01-display/04-lesson-03-variables
+        - file: lessons/lesson-01-display/04-lesson-04-on-start-forever
+        - file: lessons/lesson-01-display/04-lesson-05-display-built-in-image
+        - file: lessons/lesson-01-display/04-lesson-06-display-custom-image
+      - file: lessons/lesson-01-display/05-lab
+      - file: lessons/lesson-01-display/06-vocabulary
+      - file: lessons/lesson-01-display/07-resources
+  - caption: "Lesson 2: Onboard Components"
+    chapters:
+      - file: lessons/lesson-02-onboard-components/00-introduction
+      - file: lessons/lesson-02-onboard-components/01-objectives
+      - file: lessons/lesson-02-onboard-components/02-materials
+      - file: lessons/lesson-02-onboard-components/03-opener
+      - file: lessons/lesson-02-onboard-components/04-lesson-00-intro
+        sections:
+        - file: lessons/lesson-02-onboard-components/04-lesson-01-buttons
+        - file: lessons/lesson-02-onboard-components/04-lesson-02-speaker
+        - file: lessons/lesson-02-onboard-components/04-lesson-03-temperature
+        - file: lessons/lesson-02-onboard-components/04-lesson-04-light
+        - file: lessons/lesson-02-onboard-components/04-lesson-05-compass
+        - file: lessons/lesson-02-onboard-components/04-lesson-06-microphone
+      - file: lessons/lesson-02-onboard-components/05-lab
+      - file: lessons/lesson-02-onboard-components/06-vocabulary
+      - file: lessons/lesson-02-onboard-components/07-resources
+  - caption: "Lesson 3: Light-Emitting Diodes (LEDs)"
+    chapters:
+      - file: lessons/lesson-03-leds/00-introduction
+      - file: lessons/lesson-03-leds/01-objectives
+      - file: lessons/lesson-03-leds/02-materials
+      - file: lessons/lesson-03-leds/03-opener
+      - file: lessons/lesson-03-leds/04-lesson-00-intro
+        sections:
+        - file: lessons/lesson-03-leds/04-lesson-01-gpio
+        - file: lessons/lesson-03-leds/04-lesson-02-breadboards
+        - file: lessons/lesson-03-leds/04-lesson-03-resistors
+        - file: lessons/lesson-03-leds/04-lesson-04-led-circuit
+        - file: lessons/lesson-03-leds/04-lesson-05-complete-incomplete-circuits
+        - file: lessons/lesson-03-leds/04-lesson-06-blinking-an-led
+        - file: lessons/lesson-03-leds/04-lesson-07-led-button
+      - file: lessons/lesson-03-leds/05-lab
+      - file: lessons/lesson-03-leds/06-vocabulary
+      - file: lessons/lesson-03-leds/07-resources
+  - caption: "Lesson 4: RGB LEDs"
+    chapters:
+      - file: lessons/lesson-04-rgb-leds/00-introduction
+      - file: lessons/lesson-04-rgb-leds/01-objectives
+      - file: lessons/lesson-04-rgb-leds/02-materials
+      - file: lessons/lesson-04-rgb-leds/03-opener
+      - file: lessons/lesson-04-rgb-leds/04-lesson-00-intro
+        sections:
+        - file: lessons/lesson-04-rgb-leds/04-lesson-01-rgb-colors-part-01
+        - file: lessons/lesson-04-rgb-leds/04-lesson-02-rgb-led-circuit
+        - file: lessons/lesson-04-rgb-leds/04-lesson-03-flashing-rgb
+        - file: lessons/lesson-04-rgb-leds/04-lesson-04-functions
+        - file: lessons/lesson-04-rgb-leds/04-lesson-05-rgb-colors-part-02
+      - file: lessons/lesson-04-rgb-leds/05-lab
+      - file: lessons/lesson-04-rgb-leds/06-vocabulary
+      - file: lessons/lesson-04-rgb-leds/07-resources
+  - caption: "Lesson 5: Atmoshperic Sensing"
+    chapters:
+      - file: lessons/lesson-05-atmospheric-sensing/00-introduction
+      - file: lessons/lesson-05-atmospheric-sensing/01-objectives
+      - file: lessons/lesson-05-atmospheric-sensing/02-materials
+      - file: lessons/lesson-05-atmospheric-sensing/03-opener
+      - file: lessons/lesson-05-atmospheric-sensing/04-lesson-00-intro
+        sections:
+        - file: lessons/lesson-05-atmospheric-sensing/04-lesson-01-kitronik-aqeb-parts
+        - file: lessons/lesson-05-atmospheric-sensing/04-lesson-02-extension
+        - file: lessons/lesson-05-atmospheric-sensing/04-lesson-03-oled
+        - file: lessons/lesson-05-atmospheric-sensing/04-lesson-04-temp-hum-press
+        - file: lessons/lesson-05-atmospheric-sensing/04-lesson-05-iaq
+      - file: lessons/lesson-05-atmospheric-sensing/05-lab
+      - file: lessons/lesson-05-atmospheric-sensing/06-vocabulary
+      - file: lessons/lesson-05-atmospheric-sensing/07-resources
+  - caption: "Lesson 6: Weather Monitoring"
+    chapters:
+      - file: lessons/lesson-06-monitoring-weather/00-introduction
+      - file: lessons/lesson-06-monitoring-weather/01-objectives
+      - file: lessons/lesson-06-monitoring-weather/02-materials
+      - file: lessons/lesson-06-monitoring-weather/03-opener
+      - file: lessons/lesson-06-monitoring-weather/04-lesson-00-intro
+        sections:
+        - file: lessons/lesson-06-monitoring-weather/04-lesson-01-sparkfun-weather-bit-parts
+        - file: lessons/lesson-06-monitoring-weather/04-lesson-02-extension
+        - file: lessons/lesson-06-monitoring-weather/04-lesson-03-oled
+        - file: lessons/lesson-06-monitoring-weather/04-lesson-04-temp-hum-press
+        - file: lessons/lesson-06-monitoring-weather/04-lesson-05-wind-speed-dir
+      - file: lessons/lesson-06-monitoring-weather/05-lab
+      - file: lessons/lesson-06-monitoring-weather/06-vocabulary
+      - file: lessons/lesson-06-monitoring-weather/07-resources

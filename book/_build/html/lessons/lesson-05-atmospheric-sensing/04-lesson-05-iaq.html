@@ -1,0 +1,773 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Measuring the Air Quality Index and Equivalent Carbon Dioxide &#8212; 4CSCC Lab Manual (MakeCode)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lessons/lesson-05-atmospheric-sensing/04-lesson-05-iaq';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lab: Displaying Atmospheric Sensor Data" href="05-lab.html" />
+    <link rel="prev" title="Measuring Temperature Humidity and Atmospheric Pressure" href="04-lesson-04-temp-hum-press.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="4CSCC Lab Manual (MakeCode) - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="4CSCC Lab Manual (MakeCode) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 0: Introduction to the BBC micro:bit</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-00-introduction/04-lesson-00-intro.html">Lesson 0: Introduction to the BBC micro:bit</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-00-introduction/04-lesson-01-microbit-parts.html">Parts of the BBC micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-00-introduction/04-lesson-02-connecting.html">Connecting the micro:bit to a Computer with MakeCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-00-introduction/04-lesson-03-makecode.html">The MakeCode Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-00-introduction/04-lesson-04-running-code.html">Running Code on a micro:bit with MakeCode</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/05-lab.html">Lab: Tinkering with MakeCode and the BBC micro:bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 1: The micro:bit Display</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-01-display/04-lesson-00-intro.html">Lesson 1: The micro:bit Display</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-01-strings.html">Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-02-display-strings.html">Displaying Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-03-variables.html">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-04-on-start-forever.html"><code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">forever</span></code> Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-05-display-built-in-image.html">Displaying Built-In Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-06-display-custom-image.html">Displaying Custom Images</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/05-lab.html">Lab: Creating a Digital Nametag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 2: Onboard Components</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-00-intro.html">Lesson 2: Onboard Components</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-01-buttons.html">Using the A and B Buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-02-speaker.html">Using the Speaker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-03-temperature.html">Using the Temperature Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-04-light.html">Using the Light Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-05-compass.html">Using the Compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-06-microphone.html">Using the Microphone</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/05-lab.html">Lab: Building a Fidget Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 3: Light-Emitting Diodes (LEDs)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-03-leds/04-lesson-00-intro.html">Lesson 3: Light-Emitting Diodes (LEDs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-01-gpio.html">First Look at General-Purpose Input/Output GPIO Pins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-02-breadboards.html">Breadboards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-03-resistors.html">Resistors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-04-led-circuit.html">Building a Simple LED Circuit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-05-complete-incomplete-circuits.html">Complete and Incomplete Circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-06-blinking-an-led.html">Blinking an LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-07-led-button.html">Using a Button and an LED</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/05-lab.html">Lab: Simulating a Stoplight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 4: RGB LEDs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-00-intro.html">Lesson 4: RGB LEDs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-01-rgb-colors-part-01.html">The RGB Color Code Model (Part 1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-02-rgb-led-circuit.html">Building an RGB LED Circuit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-03-flashing-rgb.html">Flashing Red, Green, and Blue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-04-functions.html">Using Functions to Alternate Colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-05-rgb-colors-part-02.html">RGB Color Codes (Part 2)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/05-lab.html">Lab: Flashing an RGB LED RGBMYCW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 5: Atmoshperic Sensing</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-opener.html">Opener</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="04-lesson-00-intro.html">Lesson 5: Atmospheric Sensing</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="04-lesson-01-kitronik-aqeb-parts.html">Parts of the Kitronik Air Quality and Environmental Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-lesson-02-extension.html">Loading the Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-lesson-03-oled.html">Using the OLED Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-lesson-04-temp-hum-press.html">Measuring Temperature Humidity and Atmospheric Pressure</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Measuring the Air Quality Index and Equivalent Carbon Dioxide</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="05-lab.html">Lab: Displaying Atmospheric Sensor Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 6: Weather Monitoring</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-06-monitoring-weather/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-06-monitoring-weather/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-06-monitoring-weather/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-06-monitoring-weather/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-00-intro.html">Lesson 6: Weather Monitoring</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-01-sparkfun-weather-bit-parts.html">Parts of the SparkFun weather:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-02-extension.html">Loading the Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-03-oled.html">Working with OLED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-04-temp-hum-press.html">Measuring Temperature Humidity and Atmospheric Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-05-wind-speed-dir.html">Measuring Wind Speed and Wind Direction</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-06-monitoring-weather/05-lab.html">Lab: Displaying Weather Station Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-06-monitoring-weather/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-06-monitoring-weather/07-resources.html">Resources</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson-05-atmospheric-sensing/04-lesson-05-iaq.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/lessons/lesson-05-atmospheric-sensing/04-lesson-05-iaq.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Measuring the Air Quality Index and Equivalent Carbon Dioxide</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-air-quality-index">What is the Air Quality Index?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-equivalent-carbon-dioxide">What is Equivalent Carbon Dioxide?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-indoor-air-quality-iaq-with-the-micro-bit-and-kitronik-air-quality-and-environmental-board">Measuring Indoor Air Quality (IAQ) with the micro:bit and Kitronik Air Quality and Environmental Board</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><img alt="header-lesson-05" src="../../_images/header-lesson-05.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="measuring-the-air-quality-index-and-equivalent-carbon-dioxide">
+<h1>Measuring the Air Quality Index and Equivalent Carbon Dioxide<a class="headerlink" href="#measuring-the-air-quality-index-and-equivalent-carbon-dioxide" title="Link to this heading">#</a></h1>
+<section id="what-is-the-air-quality-index">
+<h2>What is the Air Quality Index?<a class="headerlink" href="#what-is-the-air-quality-index" title="Link to this heading">#</a></h2>
+<p>The Air Quality Index (AQI) is a way to measure how clean or polluted the air is in a specific place. It uses numbers and colors to show how safe the air is to breathe. Lower numbers mean the air is cleaner and healthier, while higher numbers mean there are more pollutants in the air that could be harmful, especially for people with breathing problems like asthma. The AQI helps us know when it’s okay to be outside or if we should stay indoors to protect our health.</p>
+<p><img alt="aqi" src="../../_images/aqi.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="what-is-equivalent-carbon-dioxide">
+<h2>What is Equivalent Carbon Dioxide?<a class="headerlink" href="#what-is-equivalent-carbon-dioxide" title="Link to this heading">#</a></h2>
+<p>Equivalent carbon dioxide (eCO2), is a measure of the total impact of various greenhouse gases, like methane and nitrous oxide, expressed as an amount of carbon dioxide (CO2) that would have the same effect on global warming. Scientists use eCO2 to help understand how much these gases contribute to climate change and compare their effects more easily. By looking at eCO2 levels, we can better understand and track the overall impact of different activities and industries on the environment.</p>
+</section>
+<hr class="docutils" />
+<section id="measuring-indoor-air-quality-iaq-with-the-micro-bit-and-kitronik-air-quality-and-environmental-board">
+<h2>Measuring Indoor Air Quality (IAQ) with the micro:bit and Kitronik Air Quality and Environmental Board<a class="headerlink" href="#measuring-indoor-air-quality-iaq-with-the-micro-bit-and-kitronik-air-quality-and-environmental-board" title="Link to this heading">#</a></h2>
+<p>As in the previous lesson we have to initialize the display. Select the “Display” drawer in the Toolbox.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-00" src="../../_images/makecode-kitronik-aqb-air-quality-00.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">turn</span> <span class="pre">off/on</span> <span class="pre">display</span></code> block.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-01" src="../../_images/makecode-kitronik-aqb-air-quality-01.png" /></p>
+<p>Drag the block into the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-02" src="../../_images/makecode-kitronik-aqb-air-quality-02.png" /></p>
+<p>Toggle the <code class="docutils literal notranslate"><span class="pre">off/on</span></code> switch in the block.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-03" src="../../_images/makecode-kitronik-aqb-air-quality-03.png" /></p>
+<p>The display has been initialized and can be used.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-04" src="../../_images/makecode-kitronik-aqb-air-quality-04.png" /></p>
+<p>Move the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-05" src="../../_images/makecode-kitronik-aqb-air-quality-05.png" /></p>
+<p>It is now visible without obstruction.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-06" src="../../_images/makecode-kitronik-aqb-air-quality-06.png" /></p>
+<p>Select the “Sensor” drawer.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-07" src="../../_images/makecode-kitronik-aqb-air-quality-07.png" /></p>
+<p>Here you can find the <code class="docutils literal notranslate"><span class="pre">establish</span> <span class="pre">gas</span> <span class="pre">baseline</span> <span class="pre">&amp;</span> <span class="pre">ambient</span> <span class="pre">temperature</span></code> and <code class="docutils literal notranslate"><span class="pre">setup</span> <span class="pre">gas</span> <span class="pre">sensor</span></code> blocks. These blocks help the sensors gather more accurate air quality data.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-08" src="../../_images/makecode-kitronik-aqb-air-quality-08.png" /></p>
+<p>Drag the <code class="docutils literal notranslate"><span class="pre">setup</span> <span class="pre">gas</span> <span class="pre">sensor</span></code> and <code class="docutils literal notranslate"><span class="pre">establish</span> <span class="pre">gas</span> <span class="pre">baseline</span> <span class="pre">&amp;</span> <span class="pre">ambient</span> <span class="pre">temperature</span></code> blocks into the <code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">start</span></code> block. This only needs to run once at the beginning of the program.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-09" src="../../_images/makecode-kitronik-aqb-air-quality-09.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">measure</span> <span class="pre">all</span> <span class="pre">data</span> <span class="pre">readings</span></code> block.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-10" src="../../_images/makecode-kitronik-aqb-air-quality-10.png" /></p>
+<p>Place the block into the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block. This will allow the micro:bit to record data in a loop. If this block is placed in the <code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">start</span></code> block, it will only run once. The data will not be updated continuously.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-11" src="../../_images/makecode-kitronik-aqb-air-quality-11.png" /></p>
+<p>Select the “Display” drawer to access the blocks for the OLED display.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-12" src="../../_images/makecode-kitronik-aqb-air-quality-12.png" /></p>
+<p>Select the block that displays text on the OLED screen.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-13" src="../../_images/makecode-kitronik-aqb-air-quality-13.png" /></p>
+<p>Drag the block into the forever loop below the other block.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-14" src="../../_images/makecode-kitronik-aqb-air-quality-14.png" /></p>
+<p>Select the “Text” drawer in “Advanced” drawer in the Toolbox.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-16" src="../../_images/makecode-kitronik-aqb-air-quality-16.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">join</span></code> block.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-17" src="../../_images/makecode-kitronik-aqb-air-quality-17.png" /></p>
+<p>Place the block in the first oval that holds strings.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-18" src="../../_images/makecode-kitronik-aqb-air-quality-18.png" /></p>
+<p>Clear the text in all three ovals to create empty strings.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-19" src="../../_images/makecode-kitronik-aqb-air-quality-19.png" /></p>
+<p>Duplicate the box that displays text once.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-20" src="../../_images/makecode-kitronik-aqb-air-quality-20.png" /></p>
+<p>Select the duplicated block.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-21" src="../../_images/makecode-kitronik-aqb-air-quality-21.png" /></p>
+<p>Place the block in the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block below the other block as displayed below:</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-22" src="../../_images/makecode-kitronik-aqb-air-quality-22.png" /></p>
+<p>The data the micro:bit we will be reading is IAQ score and the eCO2 level. The eCO2 level is measured in parts per million (ppm).</p>
+<p>The data will need to be represented as two separate strings for the IAQ and three separate strings for the eCO2.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Sting 1</p></th>
+<th class="head"><p>String 2</p></th>
+<th class="head"><p>String 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;IAQ</span> <span class="pre">Score</span> <span class="pre">:</span> <span class="pre">&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">iaq_data</span></code></p></td>
+<td><p>NONE</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;eCO2:</span> <span class="pre">&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ec02_data</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">ppm&quot;</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This will require a third string for the eCO2 only. Add another sting box with the <code class="docutils literal notranslate"><span class="pre">+</span></code> button.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-23" src="../../_images/makecode-kitronik-aqb-air-quality-23.png" /></p>
+<p>The third string is now available.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-24" src="../../_images/makecode-kitronik-aqb-air-quality-24.png" /></p>
+<p>Enter the data as determined above. Make sure to enter the whitespace. These spaces are necessary to have the Data display correctly.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>String 1</p></th>
+<th class="head"><p>String 2</p></th>
+<th class="head"><p>String 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;IAQ</span> <span class="pre">Score</span> <span class="pre">:</span> <span class="pre">&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">iaq_data</span></code></p></td>
+<td><p>NONE</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;eCO2:</span> <span class="pre">&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ec02_data</span></code></p></td>
+<td><p>`”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img alt="makecode-kitronik-aqb-air-quality-25" src="../../_images/makecode-kitronik-aqb-air-quality-25.png" /></p>
+<p>Select the “Sensor” drawer.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-26" src="../../_images/makecode-kitronik-aqb-air-quality-26.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">get</span> <span class="pre">IAQ</span> <span class="pre">Score</span></code>,  and <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">eCO2</span></code> blocks</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-27" src="../../_images/makecode-kitronik-aqb-air-quality-27.png" /></p>
+<p>Place them in the corresponding text fields.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-28" src="../../_images/makecode-kitronik-aqb-air-quality-28.png" /></p>
+<p>The code as it is will output the text of both measurments on the first line with only one visible.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-29" src="../../_images/makecode-kitronik-aqb-air-quality-29.png" /></p>
+<p>Change the line number to <code class="docutils literal notranslate"><span class="pre">1</span></code> .</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-30" src="../../_images/makecode-kitronik-aqb-air-quality-30.png" /></p>
+<p>The code is almost complete. The only thing needed now is a <code class="docutils literal notranslate"><span class="pre">pause</span></code> block. This will help give a more accurate reading from the sensors. Select the <code class="docutils literal notranslate"><span class="pre">Basic</span></code> drawer in the Toolbox.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-31" src="../../_images/makecode-kitronik-aqb-air-quality-31.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">pause</span></code> block.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-32" src="../../_images/makecode-kitronik-aqb-air-quality-32.png" /></p>
+<p>Drag the <code class="docutils literal notranslate"><span class="pre">pause</span></code> block to the end of the code blocks in the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-33" src="../../_images/makecode-kitronik-aqb-air-quality-33.png" /></p>
+<p>Click on the triangle drop down button.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-34" src="../../_images/makecode-kitronik-aqb-air-quality-34.png" /></p>
+<p>Select 5 seconds.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-35" src="../../_images/makecode-kitronik-aqb-air-quality-35.png" /></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">pause</span></code> block uses milliseconds (ms) and 5 seconds is 5000 miliseconds.</p>
+<p><img alt="makecode-kitronik-aqb-air-quality-36" src="../../_images/makecode-kitronik-aqb-air-quality-36.png" /></p>
+<p>The code is now ready to be flashed on the micro:bit.</p>
+<div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/#pub:S91222-97206-38819-26043" frameborder="0" sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe></div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lessons/lesson-05-atmospheric-sensing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04-lesson-04-temp-hum-press.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Measuring Temperature Humidity and Atmospheric Pressure</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05-lab.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lab: Displaying Atmospheric Sensor Data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-air-quality-index">What is the Air Quality Index?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-equivalent-carbon-dioxide">What is Equivalent Carbon Dioxide?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-indoor-air-quality-iaq-with-the-micro-bit-and-kitronik-air-quality-and-environmental-board">Measuring Indoor Air Quality (IAQ) with the micro:bit and Kitronik Air Quality and Environmental Board</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Four Corners Science and Computing Club
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
