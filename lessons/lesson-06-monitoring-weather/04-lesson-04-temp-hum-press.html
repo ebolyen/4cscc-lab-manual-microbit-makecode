@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Measuring Temperature Humidity and Atmospheric Pressure &#8212; 4CSCC Lab Manual (MakeCode)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lessons/lesson-06-monitoring-weather/04-lesson-04-temp-hum-press';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Measuring Wind Speed and Wind Direction" href="04-lesson-05-wind-speed-dir.html" />
+    <link rel="prev" title="Working with OLED" href="04-lesson-03-oled.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="4CSCC Lab Manual (MakeCode) - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="4CSCC Lab Manual (MakeCode) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 0: Introduction to the BBC micro:bit</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-00-introduction/04-lesson-00-intro.html">Lesson 0: Introduction to the BBC micro:bit</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-00-introduction/04-lesson-01-microbit-parts.html">Parts of the BBC micro:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-00-introduction/04-lesson-02-connecting.html">Connecting the micro:bit to a Computer with MakeCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-00-introduction/04-lesson-03-makecode.html">The MakeCode Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-00-introduction/04-lesson-04-running-code.html">Running Code on a micro:bit with MakeCode</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/05-lab.html">Lab: Tinkering with MakeCode and the BBC micro:bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 1: The micro:bit Display</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-01-display/04-lesson-00-intro.html">Lesson 1: The micro:bit Display</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-01-strings.html">Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-02-display-strings.html">Displaying Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-03-variables.html">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-04-on-start-forever.html"><code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">forever</span></code> Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-05-display-built-in-image.html">Displaying Built-In Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-01-display/04-lesson-06-display-custom-image.html">Displaying Custom Images</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/05-lab.html">Lab: Creating a Digital Nametag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-01-display/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 2: Onboard Components</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-00-intro.html">Lesson 2: Onboard Components</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-01-buttons.html">Using the A and B Buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-02-speaker.html">Using the Speaker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-03-temperature.html">Using the Temperature Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-04-light.html">Using the Light Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-05-compass.html">Using the Compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-06-microphone.html">Using the Microphone</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/05-lab.html">Lab: Building a Fidget Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 3: Light-Emitting Diodes (LEDs)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-03-leds/04-lesson-00-intro.html">Lesson 3: Light-Emitting Diodes (LEDs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-01-gpio.html">First Look at General-Purpose Input/Output GPIO Pins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-02-breadboards.html">Breadboards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-03-resistors.html">Resistors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-04-led-circuit.html">Building a Simple LED Circuit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-05-complete-incomplete-circuits.html">Complete and Incomplete Circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-06-blinking-an-led.html">Blinking an LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-07-led-button.html">Using a Button and an LED</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/05-lab.html">Lab: Simulating a Stoplight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 4: RGB LEDs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-00-intro.html">Lesson 4: RGB LEDs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-01-rgb-colors-part-01.html">The RGB Color Code Model (Part 1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-02-rgb-led-circuit.html">Building an RGB LED Circuit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-03-flashing-rgb.html">Flashing Red, Green, and Blue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-04-functions.html">Using Functions to Alternate Colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-04-rgb-leds/04-lesson-05-rgb-colors-part-02.html">RGB Color Codes (Part 2)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/05-lab.html">Lab: Flashing an RGB LED RGBMYCW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-04-rgb-leds/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 5: Atmoshperic Sensing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lesson-05-atmospheric-sensing/00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-05-atmospheric-sensing/01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-05-atmospheric-sensing/02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-05-atmospheric-sensing/03-opener.html">Opener</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-05-atmospheric-sensing/04-lesson-00-intro.html">Lesson 5: Atmospheric Sensing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-05-atmospheric-sensing/04-lesson-01-kitronik-aqeb-parts.html">Parts of the Kitronik Air Quality and Environmental Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-05-atmospheric-sensing/04-lesson-02-extension.html">Loading the Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-05-atmospheric-sensing/04-lesson-03-oled.html">Using the OLED Display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-05-atmospheric-sensing/04-lesson-04-temp-hum-press.html">Measuring Temperature Humidity and Atmospheric Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-05-atmospheric-sensing/04-lesson-05-iaq.html">Measuring the Air Quality Index and Equivalent Carbon Dioxide</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-05-atmospheric-sensing/05-lab.html">Lab: Displaying Atmospheric Sensor Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-05-atmospheric-sensing/06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-05-atmospheric-sensing/07-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 6: Weather Monitoring</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-objectives.html">Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-opener.html">Opener</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="04-lesson-00-intro.html">Lesson 6: Weather Monitoring</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="04-lesson-01-sparkfun-weather-bit-parts.html">Parts of the SparkFun weather:bit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-lesson-02-extension.html">Loading the Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-lesson-03-oled.html">Working with OLED</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Measuring Temperature Humidity and Atmospheric Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-lesson-05-wind-speed-dir.html">Measuring Wind Speed and Wind Direction</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="05-lab.html">Lab: Displaying Weather Station Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-resources.html">Resources</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson-06-monitoring-weather/04-lesson-04-temp-hum-press.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/lessons/lesson-06-monitoring-weather/04-lesson-04-temp-hum-press.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Measuring Temperature Humidity and Atmospheric Pressure</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><img alt="header-lesson-06" src="../../_images/header-lesson-06.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="measuring-temperature-humidity-and-atmospheric-pressure">
+<h1>Measuring Temperature Humidity and Atmospheric Pressure<a class="headerlink" href="#measuring-temperature-humidity-and-atmospheric-pressure" title="Link to this heading">#</a></h1>
+<p><img alt="sparkfun-weatherbit-bme280" src="../../_images/sparkfun-weatherbit-bme280.png" /></p>
+<p>Click on the “OLED” drawer in the Toolbox.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-01" src="../../_images/makecode-weatherbit-temp-hum-press-01.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">initialize</span> <span class="pre">OLED</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-02" src="../../_images/makecode-weatherbit-temp-hum-press-02.png" /></p>
+<p>Place the <code class="docutils literal notranslate"><span class="pre">initialize</span> <span class="pre">OLED</span></code> block in the <code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">start</span></code> block. This only needs to run once. <strong>Do not change the dimensions.</strong></p>
+<p><img alt="makecode-weatherbit-temp-hum-press-03" src="../../_images/makecode-weatherbit-temp-hum-press-03.png" /></p>
+<p>Click on the “Weatherbit” drawer in the Toolbox.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-04" src="../../_images/makecode-weatherbit-temp-hum-press-04.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">weather</span> <span class="pre">monitoring</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-05" src="../../_images/makecode-weatherbit-temp-hum-press-05.png" /></p>
+<p>Place the <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">weather</span> <span class="pre">monitoring</span></code> block in the <code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">start</span></code> block. This code only needs to run once.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-06" src="../../_images/makecode-weatherbit-temp-hum-press-06.png" /></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">forever</span></code> block can be moved.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-07" src="../../_images/makecode-weatherbit-temp-hum-press-07.png" /></p>
+<p>It is now unobstructed.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-08" src="../../_images/makecode-weatherbit-temp-hum-press-08.png" /></p>
+<p>Click on the “OLED” drawer of the Toolbox.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-09" src="../../_images/makecode-weatherbit-temp-hum-press-09.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">string</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-10" src="../../_images/makecode-weatherbit-temp-hum-press-10.png" /></p>
+<p>Place the <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">string</span></code> block in the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-11" src="../../_images/makecode-weatherbit-temp-hum-press-11.png" /></p>
+<p>We now need to format the strings as in the previous lesson. Click on the “Advanced” drawer of the Toolbox.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-12" src="../../_images/makecode-weatherbit-temp-hum-press-12.png" /></p>
+<p>Click on the “Text” drawer.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-13" src="../../_images/makecode-weatherbit-temp-hum-press-13.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">join</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-14" src="../../_images/makecode-weatherbit-temp-hum-press-14.png" /></p>
+<p>Place the <code class="docutils literal notranslate"><span class="pre">join</span></code> block in the <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">string</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-15" src="../../_images/makecode-weatherbit-temp-hum-press-15.png" /></p>
+<p>The data the micro:bit we will be reading is temperature data in celsius, relative humidity and atmospheric pressure. Temperature data is often displayed with the C at the end to indicate that the reading is in celsius. Relative humidity is a percentage and is often followed by a <code class="docutils literal notranslate"><span class="pre">%</span></code>. Atmospheric pressure is often measured in Kilopascals (kPa).</p>
+<p>The data will need to be represented as three separate strings.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Sting 1</p></th>
+<th class="head"><p>String 2</p></th>
+<th class="head"><p>String 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;Temperature:</span> <span class="pre">&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">temp_data</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">C&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;Humidity:</span> <span class="pre">&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hum_data</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;%&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;Pressure:</span> <span class="pre">&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">press</span> <span class="pre">data</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">kPa&quot;</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This will require a third string. Add another sting box with the <code class="docutils literal notranslate"><span class="pre">+</span></code> button.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-16" src="../../_images/makecode-weatherbit-temp-hum-press-16.png" /></p>
+<p>Clear the text in all three ovals to create empty strings.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-19" src="../../_images/makecode-weatherbit-temp-hum-press-19.png" /></p>
+<p>Duplicate the box that displays text twice.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-20" src="../../_images/makecode-weatherbit-temp-hum-press-20.png" /></p>
+<p>Select the two duplicated blocks.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-21" src="../../_images/makecode-weatherbit-temp-hum-press-21.png" /></p>
+<p>Place the blocks in the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block below the other block as displayed below:</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-22" src="../../_images/makecode-weatherbit-temp-hum-press-22.png" /></p>
+<p>Enter the data as determined above. Notice that there are spaces called <strong>whitespace</strong>. These spaces are necessary to have the Data display correctly.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Sting 1</p></th>
+<th class="head"><p>String 2</p></th>
+<th class="head"><p>String 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;Temperature:</span> <span class="pre">&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">temp_data</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">C&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;Humidity:</span> <span class="pre">&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hum_data</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;%&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;Pressure:</span> <span class="pre">&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">press</span> <span class="pre">data</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">hPa&quot;</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img alt="makecode-weatherbit-temp-hum-press-23" src="../../_images/makecode-weatherbit-temp-hum-press-23.png" /></p>
+<p>Some calculations must be performed for the data to display correctly. Click on the “Math” drawer of the Toolbox.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-24" src="../../_images/makecode-weatherbit-temp-hum-press-24.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">root</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-25" src="../../_images/makecode-weatherbit-temp-hum-press-25.png" /></p>
+<p>Place the <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">root</span></code> block on the workspace. This is not the calculation that will be performed. You will select another operation from the dropdown menu.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-26" src="../../_images/makecode-weatherbit-temp-hum-press-26.png" /></p>
+<p>Click on the <code class="docutils literal notranslate"><span class="pre">integer</span> <span class="pre">\</span></code> block. This operation will return a value without rounding and without a decimal value.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-27" src="../../_images/makecode-weatherbit-temp-hum-press-27.png" /></p>
+<p>This block will change. Notice that there are now two places for values.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-28" src="../../_images/makecode-weatherbit-temp-hum-press-28.png" /></p>
+<p>Duplicate  block twice.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-29" src="../../_images/makecode-weatherbit-temp-hum-press-29.png" /></p>
+<p>Select the blocks one at a time.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-30" src="../../_images/makecode-weatherbit-temp-hum-press-30.png" /></p>
+<p>Place the blocks in the part where the data sill be in the <code class="docutils literal notranslate"><span class="pre">join</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-31" src="../../_images/makecode-weatherbit-temp-hum-press-31.png" /></p>
+<p>Now you will add the blocks to collect the data. Click on the “Weatherbit” drawer of the Toolbox.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-32" src="../../_images/makecode-weatherbit-temp-hum-press-32.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">temperature</span></code>, <code class="docutils literal notranslate"><span class="pre">humidity</span></code>, and  <code class="docutils literal notranslate"><span class="pre">pressure</span></code> blocks.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-34" src="../../_images/makecode-weatherbit-temp-hum-press-34.png" /></p>
+<p>Place them in the corresponding text fields. Make sure that the <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">Pressure</span> <span class="pre">in</span></code> block is the dividend of the division block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-35" src="../../_images/makecode-weatherbit-temp-hum-press-35.png" /></p>
+<p>To calculate the temperature correctly, change the <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-36" src="../../_images/makecode-weatherbit-temp-hum-press-36.png" /></p>
+<p>This will now display the temperature correctly in celsius.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-37" src="../../_images/makecode-weatherbit-temp-hum-press-37.png" /></p>
+<p>To calculate the temperature correctly, change the <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">1024</span></code>.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-38" src="../../_images/makecode-weatherbit-temp-hum-press-38.png" /></p>
+<p>This will now display the humidity correctly.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-39" src="../../_images/makecode-weatherbit-temp-hum-press-39.png" /></p>
+<p>To calculate the pressure correctly, change the <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">25600</span></code>.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-40" src="../../_images/makecode-weatherbit-temp-hum-press-40.png" /></p>
+<p>This will now display the pressure correctly.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-41" src="../../_images/makecode-weatherbit-temp-hum-press-41.png" /></p>
+<p>As in the previous section. You need to stop the OLED from repeating the data. Click on the “Basic” drawer of the Toolbox.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-42" src="../../_images/makecode-weatherbit-temp-hum-press-42.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">pause</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-43" src="../../_images/makecode-weatherbit-temp-hum-press-43.png" /></p>
+<p>Place the pause block below the <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">string</span></code> blocks in the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-44" src="../../_images/makecode-weatherbit-temp-hum-press-44.png" /></p>
+<p>Change the pause to 5 seconds in the dropdown menu.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-47" src="../../_images/makecode-weatherbit-temp-hum-press-47.png" /></p>
+<p>Click on the “OLED” drawer of the Toolbox.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-48" src="../../_images/makecode-weatherbit-temp-hum-press-48.png" /></p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">OLED</span> <span class="pre">display</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-49" src="../../_images/makecode-weatherbit-temp-hum-press-49.png" /></p>
+<p>Place the <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">OLED</span> <span class="pre">display</span></code> below the <code class="docutils literal notranslate"><span class="pre">pause</span></code> block in the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block.</p>
+<p><img alt="makecode-weatherbit-temp-hum-press-50" src="../../_images/makecode-weatherbit-temp-hum-press-50.png" /></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lessons/lesson-06-monitoring-weather"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04-lesson-03-oled.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Working with OLED</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04-lesson-05-wind-speed-dir.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Measuring Wind Speed and Wind Direction</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Four Corners Science and Computing Club
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
