@@ -17,8 +17,10 @@ sphinx:
   builder: html
   fail_on_warning: false
 
-formats:
-   - pdf
+# As of 4 Sept 2024, this was taking too long to build. Turning off until we
+# decide that we need/want PDF output.
+# formats:
+#    - pdf
 
 python:
    install:
