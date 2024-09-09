@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -241,7 +241,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/02-materials.html">Materials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/03-opener.html">Opener</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-03-leds/04-lesson-00-intro.html">Lesson 3: Light-Emitting Diodes (LEDs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-01-gpio.html">First Look at General-Purpose Input/Output GPIO Pins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-01-gpio.html">General-Purpose Input/Output GPIO Pins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-02-breadboards.html">Breadboards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-03-resistors.html">Resistors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-04-led-circuit.html">Building a Simple LED Circuit</a></li>
@@ -527,11 +527,11 @@ document.write(`
 <p><img alt="makecode-intro-01" src="../../_images/makecode-intro-01.png" /></p>
 <section id="signing-into-makecode">
 <h2>Signing Into MakeCode<a class="headerlink" href="#signing-into-makecode" title="Link to this heading">#</a></h2>
-<p>It is possible to use MakeCode without signing in, but projects may be deleted after a while or disappear if the browser history is cleared. To sign in click on the “Sign In” button on the upper right corner:</p>
+<p>It is possible to use MakeCode without signing in, but projects may be deleted after a while or disappear if the browser history is cleared. To sign in, click on the “Sign In” button on the upper right corner:</p>
 <p><img alt="makecode-intro-02" src="../../_images/makecode-intro-02.png" /></p>
 <p>A pop-up window will appear to enter your credentials. Use the proper service as indicated by the instructor.</p>
 <p><img alt="makecode-intro-03" src="../../_images/makecode-intro-03.png" /></p>
-<p>When the sign in button will change to the picture provided with your email account once signed in, and projects will be saved automatically.</p>
+<p>After signing in, the “Sign In” button will change to display the picture associated with your email account. Once signed in, your projects will be saved automatically.</p>
 <p><img alt="makecode-intro-04" src="../../_images/makecode-intro-04.png" /></p>
 </section>
 <hr class="docutils" />
@@ -553,11 +553,11 @@ document.write(`
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>Toolbox</p></td>
-<td><p>All of the blocks needed to code the micro:bit are divided into categories and color-coded to match each category in the toolbox.</p></td>
+<td><p>All blocks needed to code the micro:bit are divided into categories and color-coded to match each category in the toolbox.</p></td>
 </tr>
 <tr class="row-even"><td><p>3</p></td>
 <td><p>micro:bit Simulator</p></td>
-<td><p>When code blocks are placed in the MakeCode Editor from the Toolbox, the simulator displays what the program does on the micro:bit simulator. The simulator can will refresh automatically when the code is changed. It is possible to stop, refresh, and debug the simulator. There are also buttons to take screenshots of the simulator and display the simulator in full-screen mode.</p></td>
+<td><p>When code blocks are placed in the MakeCode Editor from the Toolbox, the simulator displays what the program does on the micro:bit simulator. The simulator will refresh automatically when the code is changed. It is possible to stop, refresh, and debug the simulator. There are also buttons to take screenshots of the simulator and display the simulator in full-screen mode.</p></td>
 </tr>
 <tr class="row-odd"><td><p>4</p></td>
 <td><p>Download Button</p></td>
@@ -569,7 +569,7 @@ document.write(`
 </tr>
 <tr class="row-odd"><td><p>6</p></td>
 <td><p>Home Button</p></td>
-<td><p>The home button navigates the user to the start screen where the latest active projects are displayed, and other projects</p></td>
+<td><p>The home button navigates the user to the start screen, displaying the latest active projects.</p></td>
 </tr>
 <tr class="row-even"><td><p>7</p></td>
 <td><p>Share Button</p></td>
@@ -577,23 +577,23 @@ document.write(`
 </tr>
 <tr class="row-odd"><td><p>8</p></td>
 <td><p>Help Button</p></td>
-<td><p>This buton opens a tour to the MakeCode editor, opens the support page for micro:bit,</p></td>
+<td><p>This button opens a tour to the MakeCode editor, opens the support page for micro:bit, and has documentation for the hardware and the blocks.</p></td>
 </tr>
 <tr class="row-even"><td><p>9</p></td>
 <td><p>Settings Button</p></td>
-<td><p><strong>TODO</strong></p></td>
+<td><p>The settings button has many options for changing the project’s settings. Extensions can be added from this button. The settings button also has options to delete the project or view different versions of the project.</p></td>
 </tr>
 <tr class="row-odd"><td><p>10</p></td>
 <td><p>Sign In Button</p></td>
-<td><p><strong>TODO</strong></p></td>
+<td><p>This button allows users to save projects on the cloud. MakeCode users can log in using Microsoft, Google, or Clever accounts.</p></td>
 </tr>
 <tr class="row-even"><td><p>11</p></td>
 <td><p>Undo and Redo Buttons</p></td>
-<td><p><strong>TODO</strong></p></td>
+<td><p>These buttons undo or redo the last actions. This can be useful if a mistake is made.</p></td>
 </tr>
 <tr class="row-odd"><td><p>12</p></td>
 <td><p>Zoom Buttons</p></td>
-<td><p><strong>TODO</strong></p></td>
+<td><p>The zoom buttons zoom in and out of the editor, making blocks larger or smaller on the screen.</p></td>
 </tr>
 </tbody>
 </table>

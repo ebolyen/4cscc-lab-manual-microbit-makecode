@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>First Look at General-Purpose Input/Output GPIO Pins &#8212; 4CSCC Lab Manual (MakeCode)</title>
+    <title>General-Purpose Input/Output GPIO Pins &#8212; 4CSCC Lab Manual (MakeCode)</title>
   
   
   
@@ -192,7 +192,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../lesson-00-introduction/04-lesson-04-running-code.html">Running Code on a micro:bit with MakeCode</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/05-lab.html">Lab: Tinkering with MakeCode and the BBB micro:bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/05-lab.html">Lab: Tinkering with MakeCode and the BBC micro:bit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/06-vocabulary.html">Vocabulary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/07-resources.html">Resources</a></li>
 </ul>
@@ -241,7 +241,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02-materials.html">Materials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-opener.html">Opener</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="04-lesson-00-intro.html">Lesson 3: Light-Emitting Diodes (LEDs)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">First Look at General-Purpose Input/Output GPIO Pins</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">General-Purpose Input/Output GPIO Pins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04-lesson-02-breadboards.html">Breadboards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04-lesson-03-resistors.html">Resistors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04-lesson-04-led-circuit.html">Building a Simple LED Circuit</a></li>
@@ -299,7 +299,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-00-intro.html">Lesson 6: Weather Monitoring</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-01-sparkfun-weather-bit-parts.html">Parts of the SparkFun weather:bit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-02-extension.html">Loading the Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-03-oled.html">OLED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-03-oled.html">Working with OLED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-04-temp-hum-press.html">Measuring Temperature Humidity and Atmospheric Pressure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-05-wind-speed-dir.html">Measuring Wind Speed and Wind Direction</a></li>
 </ul>
@@ -479,7 +479,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -490,11 +492,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>First Look at General-Purpose Input/Output GPIO Pins</h1>
+    <h1>General-Purpose Input/Output GPIO Pins</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-general-purpose-input-output-pins">What are General-Purpose Input/Output Pins?</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -505,11 +515,15 @@ document.write(`
                 <article class="bd-article">
                   
   <p><img alt="header-lesson-03" src="../../_images/header-lesson-03.png" /></p>
-<section class="tex2jax_ignore mathjax_ignore" id="first-look-at-general-purpose-input-output-gpio-pins">
-<h1>First Look at General-Purpose Input/Output GPIO Pins<a class="headerlink" href="#first-look-at-general-purpose-input-output-gpio-pins" title="Link to this heading">#</a></h1>
-<p>The micro:bit has 19 assignable <strong>general-purpose input/output (GPIO)</strong> pins. These pins can be used as inputs for different switches and sensors. They can also control outputs like light-emitting diodes (LEDs), displays, buzzers, and motors. Some pins are designed to work with alligator clip leads, but others require breakout boards to access the pins. The pinout for the micro:bit is displayed below:</p>
+<section class="tex2jax_ignore mathjax_ignore" id="general-purpose-input-output-gpio-pins">
+<h1>General-Purpose Input/Output GPIO Pins<a class="headerlink" href="#general-purpose-input-output-gpio-pins" title="Link to this heading">#</a></h1>
+<section id="what-are-general-purpose-input-output-pins">
+<h2>What are General-Purpose Input/Output Pins?<a class="headerlink" href="#what-are-general-purpose-input-output-pins" title="Link to this heading">#</a></h2>
+<p><strong>General-purpose input/output (GPIO) pins</strong>, are small connection points on a device like the BBC micro:bit. They let you connect the micro:bit to other electronic components, like sensors, lights, or motors. These pins can either send signals to control these components or receive signals to get information from them, making your projects more interactive and fun.</p>
+<p>The micro:bit has 19 assignable GPIO pins. These pins can be used as <strong>inputs</strong> for different switches and sensors. They can also control <strong>outputs</strong> like light-emitting diodes (LEDs), displays, buzzers, and motors. Some pins are designed to work with alligator clip leads, but others require breakout boards to access the pins. The <strong>pinout</strong> describing the main functions and alternative functions for the micro:bit is displayed below:</p>
 <p><img alt="microbit-pinout" src="../../_images/microbit-pinout.png" /></p>
-<p>Notice how many pins have many functions. GPIO pins 3, 4, 6, 7, and 10 are shared with the LED matrix display. Buttons A and B are also connected to GPIO pins 5 and 11. In this lesson, we will learn to connect the GPIO pins to a breadboard using the Kitronik prototyping plate breakout board.</p>
+<p>Notice how many pins have many functions. GPIO pins 3, 4, 6, 7, and 10 are shared with the LED matrix display. Buttons A and B are also connected to GPIO pins 5 and 11. Pin 12 is not programmable. In this lesson, we will learn to connect the GPIO pins to a breadboard using the Kitronik prototyping plate breakout board.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -566,6 +580,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-general-purpose-input-output-pins">What are General-Purpose Input/Output Pins?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

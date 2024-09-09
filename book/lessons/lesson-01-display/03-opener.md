@@ -4,7 +4,9 @@
 
 ## Pixel Art
 
-Take a 5×5 grid sheet from your teacher. This grid has 25 small squares arranged in a 5×5 pattern.
+Take a 5×5 grid sheet from your teacher. This grid has 25 small squares arranged in a 5×5 pattern. 
+
+A downloadable file with 5×5grids is available here.
 
 ### Create Your Pixel Art: 
 

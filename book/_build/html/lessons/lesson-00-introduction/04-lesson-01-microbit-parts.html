@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -241,7 +241,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/02-materials.html">Materials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson-03-leds/03-opener.html">Opener</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-03-leds/04-lesson-00-intro.html">Lesson 3: Light-Emitting Diodes (LEDs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-01-gpio.html">First Look at General-Purpose Input/Output GPIO Pins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-01-gpio.html">General-Purpose Input/Output GPIO Pins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-02-breadboards.html">Breadboards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-03-resistors.html">Resistors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-03-leds/04-lesson-04-led-circuit.html">Building a Simple LED Circuit</a></li>
@@ -582,7 +582,7 @@ document.write(`
 <hr class="docutils" />
 <section id="the-55-led-matrix-display">
 <h3>The 5×5 LED Matrix Display<a class="headerlink" href="#the-55-led-matrix-display" title="Link to this heading">#</a></h3>
-<p>The 5×5 LED Matrix consists of 25 individually controlable <strong>light-emmitting diodes (LEDs)</strong>. There are a series of blocks that allow the user to control the LEDs to display text and images.</p>
+<p>The 5×5 LED Matrix consists of 25 individually controllable <strong>light-emmitting diodes (LEDs)</strong>. There are a series of blocks that allow the user to control the LEDs to display text and images.</p>
 <p>The 5×5 LED Matrix is displayed below:</p>
 <p><img alt="microbit-display" src="../../_images/microbit-display.png" /></p>
 </section>
@@ -598,7 +598,7 @@ document.write(`
 <hr class="docutils" />
 <section id="alligator-gpio-pins">
 <h4>Alligator GPIO Pins<a class="headerlink" href="#alligator-gpio-pins" title="Link to this heading">#</a></h4>
-<p>The most accessible pins are designed with holes with alligator clips to easily attach wires to these pins without needing any special tools. These pins are labeled <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, 2, <code class="docutils literal notranslate"><span class="pre">3V</span></code>, and <code class="docutils literal notranslate"><span class="pre">GND</span></code>. These labels help you know where to connect your wires when using alligator clips on these pins.</p>
+<p>The most accessible pins are designed with holes with alligator clips to easily attach wires to these pins without needing any special tools. These pins are labeled <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3V</span></code>, and <code class="docutils literal notranslate"><span class="pre">GND</span></code>. These labels help you know where to connect your wires when using alligator clips on these pins.</p>
 <hr class="docutils" />
 <section id="alligator-input-output-pins">
 <h5>Alligator Input/Output Pins<a class="headerlink" href="#alligator-input-output-pins" title="Link to this heading">#</a></h5>
@@ -630,21 +630,21 @@ document.write(`
 <hr class="docutils" />
 <section id="id1">
 <h5>Breakout Board GPIO Pins<a class="headerlink" href="#id1" title="Link to this heading">#</a></h5>
-<p>The breakout board GPIO pins are smaller than the pins that are designed to be connected with alligator clips. It is possible to make contact with these pins, but they small and close together making a breakout coard the best option when connecting these pins.</p>
+<p>The breakout board GPIO pins are smaller than the pins that are designed to be connected with alligator clips. It is possible to make contact with these pins, but they are small and close together making a breakout board the best option when connecting these pins.</p>
 <p>The breakout board GPIO pins are displayed below:</p>
 <p><img alt="microbit-breakout-gpio" src="../../_images/microbit-breakout-gpio.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="breakout-board-3v3-pins">
 <h5>Breakout Board 3v3 Pins<a class="headerlink" href="#breakout-board-3v3-pins" title="Link to this heading">#</a></h5>
-<p>The breakout 3v3 pin on the micro:bit provides a small amount of power, as it does with the alligator 3v3. Breakout boards often have access to</p>
+<p>The breakout 3v3 pin on the micro:bit provides a small amount of power, as it does with the alligator 3v3. Breakout boards often have access to 3v3 voltage pin that is always on. This pin is used to power sensors. These pins can also be used to check if LEDs are working correctly.</p>
 <p><img alt="microbit-breakout-3v3" src="../../_images/microbit-breakout-3v3.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="breakout-board-gnd-pins">
 <h5>Breakout Board GND Pins<a class="headerlink" href="#breakout-board-gnd-pins" title="Link to this heading">#</a></h5>
-<p><strong>TODO: EXPLAIN THE PINS</strong></p>
-<p><img alt="microbit-breakout-gnd" src="../../_images/microbit-breakout-gnd.png" /></p>
+<p>The breakout board fuctions just as the alligator ground pins. These pins are used to complete the circuit.
+<img alt="microbit-breakout-gnd" src="../../_images/microbit-breakout-gnd.png" /></p>
 </section>
 </section>
 </section>
@@ -675,43 +675,43 @@ document.write(`
 <hr class="docutils" />
 <section id="temperature-sensor">
 <h3>Temperature Sensor<a class="headerlink" href="#temperature-sensor" title="Link to this heading">#</a></h3>
-<p>The micro: bit’s temperature sensor measures how hot or cold it is around the device. It’s built into the <strong>processor</strong> (the micro:bit’s brain), so it can quickly read temperature information, which can then use this data to display the temperature on the LED screen or respond to changes in temperature in your programs. This temperature sensor is accurate between ±4°C.</p>
+<p>The micro:bit’s temperature sensor measures how hot or cold it is around the device. It’s built into the <strong>processor</strong> (the micro:bit’s brain), so it can quickly read temperature information, which can then use this data to display the temperature on the LED screen or respond to changes in temperature in your programs. This temperature sensor is accurate between ±4°C.</p>
 <p><img alt="microbit-processor" src="../../_images/microbit-processor.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="the-captive-touch-inputs">
 <h3>The Captive Touch Inputs<a class="headerlink" href="#the-captive-touch-inputs" title="Link to this heading">#</a></h3>
-<p>TODO</p>
+<p>The BBC micro:bit has special pins that can sense touch, called captive touch pins. When you touch these pins, they can detect the tiny electrical charge from your body and respond, allowing you to control things like lights or sounds just by touching the micro:bit.</p>
 <hr class="docutils" />
 <section id="the-captive-touch-logo">
 <h4>The Captive Touch Logo<a class="headerlink" href="#the-captive-touch-logo" title="Link to this heading">#</a></h4>
-<p>The capacitive touch logo on the micro:bit works like a touch-sensitive button. When you touch the logo, it can detect your touch and send a signal to the micro:bit’s processor, allowing you to interact with your programs in a fun and easy way, like turning on lights or starting a game.</p>
+<p>The captive touch logo on the micro:bit works like a touch-sensitive button. When you touch the logo, it can detect your touch and send a signal to the micro:bit’s processor, allowing you to interact with your programs in a fun and easy way, like turning on lights or starting a game.</p>
 <p><img alt="microbit-logo" src="../../_images/microbit-logo.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="the-captive-touch-pins">
 <h4>The Captive Touch Pins<a class="headerlink" href="#the-captive-touch-pins" title="Link to this heading">#</a></h4>
-<p>The capacitive touch pins on the micro:bit are touch-sensitive spots, similar to the logo. When you touch these pins, they can detect your touch and send a signal to the micro:bit’s processor. This lets you interact with your programs in different ways, like controlling lights or sounds by simply touching the pins.</p>
+<p>The captive touch pins on the micro:bit are touch-sensitive spots, similar to the logo. When you touch these pins, they can detect your touch and send a signal to the micro:bit’s processor. This lets you interact with your programs in different ways, like controlling lights or sounds by simply touching the pins.</p>
 <p><img alt="microbit-captive-touch-pins" src="../../_images/microbit-captive-touch-pins.png" /></p>
 </section>
 <hr class="docutils" />
 <section id="the-captive-touch-gnd">
 <h4>The Captive Touch GND<a class="headerlink" href="#the-captive-touch-gnd" title="Link to this heading">#</a></h4>
-<p>To use the capacitive touch logo and pins on the BBC micro:bit, you need to connect the GND pin to something that you are touching, like holding a wire connected to it. This helps the micro:bit detect your touch more accurately because it completes the electrical circuit needed for the touch sensors to work properly.</p>
+<p>To use the captive touch logo and pins on the BBC micro:bit, you need to connect the GND pin to something that you are touching, like holding a wire connected to it. This helps the micro:bit detect your touch more accurately because it completes the electrical circuit needed for the touch sensors to work properly.</p>
 <p><img alt="microbit-captive-gnd" src="../../_images/microbit-captive-gnd.png" /></p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="the-bluetooth-antenna">
 <h3>The Bluetooth Antenna<a class="headerlink" href="#the-bluetooth-antenna" title="Link to this heading">#</a></h3>
-<p>The BLE antenna micro:bit allows it to communicate wirelessly with other devices using Bluetooth. This means the micro:bit can send and receive information, like messages or sensor data, to and from phones, tablets, and other micro:bits without using any cables.</p>
+<p>The BLE antenna on the micro:bit allows it to communicate wirelessly with other devices using Bluetooth. This means the micro:bit can send and receive information, like messages or sensor data, to and from phones, tablets, and other micro:bits without using any cables.</p>
 <p><img alt="microbit-antenna" src="../../_images/microbit-antenna.png" /></p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="non-programmable-components">
 <h2>Non-Programmable Components<a class="headerlink" href="#non-programmable-components" title="Link to this heading">#</a></h2>
-<p>There are several compnents that cannot be controled using MakeCode blocks. The componets are necessary for the micro:bit to function properly. Tne non-programmable components are as follows:</p>
+<p>There are several compnents that cannot be controlled using MakeCode blocks. The componets are necessary for the micro:bit to function properly. Tne non-programmable components are as follows:</p>
 <hr class="docutils" />
 <section id="the-processor">
 <h3>The Processor<a class="headerlink" href="#the-processor" title="Link to this heading">#</a></h3>
@@ -727,7 +727,7 @@ document.write(`
 <hr class="docutils" />
 <section id="the-power-connector">
 <h3>The Power Connector<a class="headerlink" href="#the-power-connector" title="Link to this heading">#</a></h3>
-<p>The power connector on the micro:bit is where you plug in a power source, like a battery pack or a USB cable. This power source gives the micro:bit the energy it needs to run your programs when it is not connected to the computer with a USC cord. Without power, the micro:bit can’t do anything.</p>
+<p>The power connector on the micro:bit is where you plug in a power source, like a battery pack or a USB cable. This power source gives the micro:bit the energy it needs to run your programs when it is not connected to the computer with a USB cord. Without power, the micro:bit can’t do anything.</p>
 <p><img alt="microbit-power" src="../../_images/microbit-power.png" /></p>
 </section>
 <hr class="docutils" />

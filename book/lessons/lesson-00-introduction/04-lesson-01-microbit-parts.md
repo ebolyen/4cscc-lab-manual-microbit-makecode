@@ -35,7 +35,7 @@ As mentioned above, the micro:bit has many programmable components that can be d
 
 ### The 5×5 LED Matrix Display
 
-The 5×5 LED Matrix consists of 25 individually controlable **light-emmitting diodes (LEDs)**. There are a series of blocks that allow the user to control the LEDs to display text and images.  
+The 5×5 LED Matrix consists of 25 individually controllable **light-emmitting diodes (LEDs)**. There are a series of blocks that allow the user to control the LEDs to display text and images.  
 
 The 5×5 LED Matrix is displayed below:
 
@@ -61,7 +61,7 @@ The breakout board GPIO pins are slip pins that cannot be accessed without a **b
 
 #### Alligator GPIO Pins
 
-The most accessible pins are designed with holes with alligator clips to easily attach wires to these pins without needing any special tools. These pins are labeled `0`, `1`, 2, `3V`, and `GND`. These labels help you know where to connect your wires when using alligator clips on these pins.
+The most accessible pins are designed with holes with alligator clips to easily attach wires to these pins without needing any special tools. These pins are labeled `0`, `1`, `2`, `3V`, and `GND`. These labels help you know where to connect your wires when using alligator clips on these pins.
 
 ---
 
@@ -107,7 +107,7 @@ Some breakout boards are designed to work with components that have special conn
 
 ##### Breakout Board GPIO Pins
 
-The breakout board GPIO pins are smaller than the pins that are designed to be connected with alligator clips. It is possible to make contact with these pins, but they small and close together making a breakout coard the best option when connecting these pins.
+The breakout board GPIO pins are smaller than the pins that are designed to be connected with alligator clips. It is possible to make contact with these pins, but they are small and close together making a breakout board the best option when connecting these pins.
 
 The breakout board GPIO pins are displayed below:
 
@@ -117,7 +117,7 @@ The breakout board GPIO pins are displayed below:
 
 ##### Breakout Board 3v3 Pins
 
-The breakout 3v3 pin on the micro:bit provides a small amount of power, as it does with the alligator 3v3. Breakout boards often have access to  
+The breakout 3v3 pin on the micro:bit provides a small amount of power, as it does with the alligator 3v3. Breakout boards often have access to 3v3 voltage pin that is always on. This pin is used to power sensors. These pins can also be used to check if LEDs are working correctly.
 
 ![microbit-breakout-3v3](assets/microbit-breakout-3v3.png)
 
@@ -125,8 +125,7 @@ The breakout 3v3 pin on the micro:bit provides a small amount of power, as it do
 
 ##### Breakout Board GND Pins
 
-**TODO: EXPLAIN THE PINS**
-
+The breakout board fuctions just as the alligator ground pins. These pins are used to complete the circuit. 
 ![microbit-breakout-gnd](assets/microbit-breakout-gnd.png)
 
 ---
@@ -165,7 +164,7 @@ The **accelerometer** on the micro:bit senses movement and can tell how fast and
 
 ### Temperature Sensor
 
-The micro: bit's temperature sensor measures how hot or cold it is around the device. It’s built into the **processor** (the micro:bit's brain), so it can quickly read temperature information, which can then use this data to display the temperature on the LED screen or respond to changes in temperature in your programs. This temperature sensor is accurate between ±4°C.
+The micro:bit's temperature sensor measures how hot or cold it is around the device. It’s built into the **processor** (the micro:bit's brain), so it can quickly read temperature information, which can then use this data to display the temperature on the LED screen or respond to changes in temperature in your programs. This temperature sensor is accurate between ±4°C.
 
 ![microbit-processor](assets/microbit-processor.png)
 
@@ -173,13 +172,13 @@ The micro: bit's temperature sensor measures how hot or cold it is around the de
 
 ### The Captive Touch Inputs
 
-TODO
+The BBC micro:bit has special pins that can sense touch, called captive touch pins. When you touch these pins, they can detect the tiny electrical charge from your body and respond, allowing you to control things like lights or sounds just by touching the micro:bit.
 
 ---
 
 #### The Captive Touch Logo
 
-The capacitive touch logo on the micro:bit works like a touch-sensitive button. When you touch the logo, it can detect your touch and send a signal to the micro:bit’s processor, allowing you to interact with your programs in a fun and easy way, like turning on lights or starting a game. 
+The captive touch logo on the micro:bit works like a touch-sensitive button. When you touch the logo, it can detect your touch and send a signal to the micro:bit’s processor, allowing you to interact with your programs in a fun and easy way, like turning on lights or starting a game. 
 
 ![microbit-logo](assets/microbit-logo.png)
 
@@ -187,7 +186,7 @@ The capacitive touch logo on the micro:bit works like a touch-sensitive button. 
 
 #### The Captive Touch Pins
 
-The capacitive touch pins on the micro:bit are touch-sensitive spots, similar to the logo. When you touch these pins, they can detect your touch and send a signal to the micro:bit’s processor. This lets you interact with your programs in different ways, like controlling lights or sounds by simply touching the pins.
+The captive touch pins on the micro:bit are touch-sensitive spots, similar to the logo. When you touch these pins, they can detect your touch and send a signal to the micro:bit’s processor. This lets you interact with your programs in different ways, like controlling lights or sounds by simply touching the pins.
 
 ![microbit-captive-touch-pins](assets/microbit-captive-touch-pins.png)
 
@@ -195,7 +194,7 @@ The capacitive touch pins on the micro:bit are touch-sensitive spots, similar to
 
 #### The Captive Touch GND
 
-To use the capacitive touch logo and pins on the BBC micro:bit, you need to connect the GND pin to something that you are touching, like holding a wire connected to it. This helps the micro:bit detect your touch more accurately because it completes the electrical circuit needed for the touch sensors to work properly.
+To use the captive touch logo and pins on the BBC micro:bit, you need to connect the GND pin to something that you are touching, like holding a wire connected to it. This helps the micro:bit detect your touch more accurately because it completes the electrical circuit needed for the touch sensors to work properly.
 
 ![microbit-captive-gnd](assets/microbit-captive-gnd.png)
 
@@ -203,7 +202,7 @@ To use the capacitive touch logo and pins on the BBC micro:bit, you need to conn
 
 ### The Bluetooth Antenna
 
-The BLE antenna micro:bit allows it to communicate wirelessly with other devices using Bluetooth. This means the micro:bit can send and receive information, like messages or sensor data, to and from phones, tablets, and other micro:bits without using any cables.
+The BLE antenna on the micro:bit allows it to communicate wirelessly with other devices using Bluetooth. This means the micro:bit can send and receive information, like messages or sensor data, to and from phones, tablets, and other micro:bits without using any cables.
 
 ![microbit-antenna](assets/microbit-antenna.png)
 
@@ -211,7 +210,7 @@ The BLE antenna micro:bit allows it to communicate wirelessly with other devices
 
 ## Non-Programmable Components
 
-There are several compnents that cannot be controled using MakeCode blocks. The componets are necessary for the micro:bit to function properly. Tne non-programmable components are as follows:
+There are several compnents that cannot be controlled using MakeCode blocks. The componets are necessary for the micro:bit to function properly. Tne non-programmable components are as follows:
 
 ---
 
@@ -233,7 +232,7 @@ The USB connector on the micro:bit lets you connect it to a computer using a USB
 
 ### The Power Connector
 
-The power connector on the micro:bit is where you plug in a power source, like a battery pack or a USB cable. This power source gives the micro:bit the energy it needs to run your programs when it is not connected to the computer with a USC cord. Without power, the micro:bit can’t do anything.
+The power connector on the micro:bit is where you plug in a power source, like a battery pack or a USB cable. This power source gives the micro:bit the energy it needs to run your programs when it is not connected to the computer with a USB cord. Without power, the micro:bit can’t do anything.
 
 ![microbit-power](assets/microbit-power.png)
 

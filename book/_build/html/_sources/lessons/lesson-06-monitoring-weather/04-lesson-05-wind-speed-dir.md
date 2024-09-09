@@ -94,15 +94,27 @@ Place the `join` block in the `show string` block.
 
 ![makecode-weatherbit-ws-wd-30](assets/makecode-weatherbit-ws-wd-30.png)
 
+Click on the "Weatherbit" drawer of the Toolbox.
+
 ![makecode-weatherbit-ws-wd-31](assets/makecode-weatherbit-ws-wd-31.png)
+
+Select the `wind speed` block.
 
 ![makecode-weatherbit-ws-wd-32](assets/makecode-weatherbit-ws-wd-32.png)
 
+Place the `wind speed` block in the `truncate` block.
+
 ![makecode-weatherbit-ws-wd-33](assets/makecode-weatherbit-ws-wd-33.png)
+
+Click on the "Weatherbit" drawer of the Toolbox.
 
 ![makecode-weatherbit-ws-wd-34](assets/makecode-weatherbit-ws-wd-34.png)
 
+Select the `wind direction` block.
+
 ![makecode-weatherbit-ws-wd-35](assets/makecode-weatherbit-ws-wd-35.png)
+
+Place the `wind direction` block in the `join` block.
 
 ![makecode-weatherbit-ws-wd-36](assets/makecode-weatherbit-ws-wd-36.png)
 

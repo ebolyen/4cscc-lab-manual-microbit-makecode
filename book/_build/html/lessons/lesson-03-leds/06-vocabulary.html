@@ -192,7 +192,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../lesson-00-introduction/04-lesson-04-running-code.html">Running Code on a micro:bit with MakeCode</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/05-lab.html">Lab: Tinkering with MakeCode and the BBB micro:bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/05-lab.html">Lab: Tinkering with MakeCode and the BBC micro:bit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/06-vocabulary.html">Vocabulary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson-00-introduction/07-resources.html">Resources</a></li>
 </ul>
@@ -241,7 +241,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02-materials.html">Materials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-opener.html">Opener</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="04-lesson-00-intro.html">Lesson 3: Light-Emitting Diodes (LEDs)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="04-lesson-01-gpio.html">First Look at General-Purpose Input/Output GPIO Pins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-lesson-01-gpio.html">General-Purpose Input/Output GPIO Pins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04-lesson-02-breadboards.html">Breadboards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04-lesson-03-resistors.html">Resistors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04-lesson-04-led-circuit.html">Building a Simple LED Circuit</a></li>
@@ -299,7 +299,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-00-intro.html">Lesson 6: Weather Monitoring</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-01-sparkfun-weather-bit-parts.html">Parts of the SparkFun weather:bit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-02-extension.html">Loading the Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-03-oled.html">OLED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-03-oled.html">Working with OLED</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-04-temp-hum-press.html">Measuring Temperature Humidity and Atmospheric Pressure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-06-monitoring-weather/04-lesson-05-wind-speed-dir.html">Measuring Wind Speed and Wind Direction</a></li>
 </ul>
@@ -510,12 +510,16 @@ document.write(`
 <p><strong>anode</strong>: the positive terminal on an electronic component like a battery or an LED, where electricity flows in.</p>
 <p><strong>breadboard</strong>: a tool used in building and testing electronic circuits by easily inserting components into its holes without needing to solder.</p>
 <p><strong>cathode</strong>: the negative terminal on an electronic component like a battery or an LED, where electricity flows out.</p>
+<p><strong>circuit</strong>:</p>
 <p><strong>complete circuit</strong>: a closed loop that allows electricity to flow all the way around from a power source, through various components, and back to the power source.</p>
 <p><strong>electric current</strong>: the flow of electrical charge through a circuit, similar to how water flows through a pipe.</p>
 <p><strong>incomplete circuit</strong>: a broken loop where electricity cannot flow all the way around because there is a gap or break somewhere in the path.</p>
+<p><strong>input</strong>: the data or signals it receives from sensors or buttons, which it then uses to perform actions.</p>
 <p><strong>light-emitting diode (LED)</strong>: a small, energy-efficient light that lights up when electricity flows through it in the right direction.</p>
-<p><strong>negative terminal</strong>:</p>
-<p><strong>positive terminal</strong>:</p>
+<p><strong>negative terminal</strong>: is the point on a battery or power source where the electric current flows out, usually marked with a minus sign (-).</p>
+<p><strong>output</strong>: the response or action it produces, like lighting up an LED or sending a signal to a motor, after processing the input.</p>
+<p><strong>pinout</strong>: a diagram or description that shows what each pin or connection point on a microcontroller or electronic device does, helping you know where to connect different components.</p>
+<p><strong>positive terminal</strong>: the point on a battery or power source where the electric current starts, and it’s usually marked with a plus sign (+).</p>
 <p><strong>resistance</strong>: what slows down the flow of electricity in a circuit, similar to how friction slows down objects moving across a surface.</p>
 <p><strong>resistor</strong>: an electronic component that slows down the flow of electricity in a circuit, helping to control the amount of power that reaches other parts.</p>
 <p><strong>voltage</strong>: the force that pushes electric current through a circuit, much like water pressure pushes water through a hose.</p>

@@ -2,7 +2,7 @@
 
 # Running Code on a micro:bit with MakeCode
 
-The code in this section describes how to create a first program. The program displays the text "Hello!" and displays it on the micro:bit display once.
+The code in this section describes how to create your first program. The program displays the text "Hello!" and displays it on the micro:bit display once.
 
 ## Selecting and Adding Blocks
 
@@ -10,19 +10,19 @@ Click on the `Basic` section of the Toolbox.
 
 ![makecode-first-program-01](assets/makecode-first-program-01.png)
 
-Select the `show string` block.
+Select the `show string` block. A string is a group of characters that can include letters, numbers, symbols, and even spaces. Strings are mainly used to store text that people can read, like words and sentences. They help computer programs communicate information to the person using the program.
 
 ![makecode-first-program-02](assets/makecode-first-program-02.png)
 
-Drag the `show string` block into the `on start` block.
+Drag the `show string` block into the `on start` block. Pay close attention to the shape of the blocks. They need to have the same shape to "click" together and make your code work correctly.
 
 ![makecode-first-program-03](assets/makecode-first-program-03.gif)
 
-The program is now complete.
+The program is now complete. Click run and watch your micro:bit display your message. Now replace ‘hello’ with another word and run the code. Did it work?
 
 ## Handling Unused Blocks
 
-Unused blocks can either be moved or deleted. Unused blocks do not generally have affect on the program if they are empty, but moving or deleting unused blocks prevents overlapping blocks and improves the readability of the code.
+Unused blocks can be moved or deleted. Even if they are empty, unused blocks do not generally affect the program, but moving or deleting unused blocks prevents overlapping blocks and improves the code's readability.
 
 ### Moving Unused Blocks
 
@@ -42,7 +42,7 @@ Unused blocks can also be deleted by selecting the block and pressing the delete
 
 ## Downloading Code to the micro:bit
 
-After the `show string` block is placed in the `on start` block, it can be downloaded to the micro:bit. If the micro:bit is not connected, follow the steps in the previous section TODO:LINK.
+After the `show string` block is placed in the `on start` block, it can be downloaded to the micro:bit. If the micro:bit is not connected, follow the steps in the previous section.
 
 ![makecode-first-program-07](assets/makecode-first-program-07.png)
 

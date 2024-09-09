@@ -2,6 +2,11 @@
 
 # Connecting the micro:bit to a Computer with MakeCode
 
+Connect the micro USB cable to your 
+micro:bit. 
+
+Attach the other end of the 
+
 Click on the button with three dots to start connecting the micro:bit.
 
 ![makecode-connection-01](assets/makecode-connection-01.png)
@@ -21,7 +26,7 @@ Another window appears with a prompt to pair the micro:bit with the computer. Se
 A window appears with a list of devices.
 
 ```{warning}
-Attaching more than one micro:bit to the computer can cause complicate this process. Only one device should be connected and listed in the window.
+Attaching more than one micro:bit to the computer can complicate this process. Only one device should be connected and listed in the window.
 ```
 
 ![makecode-connection-05](assets/makecode-connection-05.png)

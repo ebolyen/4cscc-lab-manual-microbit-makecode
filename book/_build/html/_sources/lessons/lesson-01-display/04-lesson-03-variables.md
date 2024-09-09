@@ -14,11 +14,11 @@ Click on "Make a Variable".
 
 ![makecode-variables-02](assets/makecode-variables-02.png)
 
-A window will appear with a text box and on "Ok" button.
+A window will appear with a text box and an "Ok" button.
 
 ![makecode-variables-03](assets/makecode-variables-03.png)
 
-Enter your "name" and the new variable name, and press "Ok".
+Enter your "name" in the "New variable name" box, and press "Ok".
 
 ![makecode-variables-04](assets/makecode-variables-04.png)
 

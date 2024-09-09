@@ -4,7 +4,7 @@
 
 ## What is a resistor?
 
-A **resistor** is a small but essential part of many electronic circuits. Its job is to control the flow of electricity, almost like a valve controls water in a hose. Resisting or slowing down the electrical current helps keep other parts in the circuit, like lights or motors, from getting too much power and burning out. Resistors come in different strengths, which allow engineers and scientists to decide exactly how much they want to slow down the electricity in different parts of a circuit, ensuring everything works smoothly and safely.
+A **resistor** is a small but essential part of many electronic **circuits**. Its job is to control the flow of electricity, almost like a valve controls water in a hose. Resisting or slowing down the electrical current helps keep other parts in the circuit, like lights or motors, from getting too much power and burning out. Resistors come in different strengths, which allow engineers and scientists to decide exactly how much they want to slow down the electricity in different parts of a circuit, ensuring everything works smoothly and safely.
 
 Imagine you have two water tanks, each with a spout at the bottom where the water comes out. If one tank has a big spout and the other has a smaller spout, the water will flow out much faster from the tank with the big spout than from the one with the smaller spout. 
 

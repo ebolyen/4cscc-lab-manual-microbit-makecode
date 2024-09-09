@@ -18,7 +18,7 @@ Click on the string in the `show string` block and delete it.
 
 ![makecode-show-string-04](assets/makecode-show-string-04.png)
 
-Change the string in the `show string` block.
+Enter a string of your choice in the `show string` block.
 
 ![makecode-show-string-05](assets/makecode-show-string-05.png)
 

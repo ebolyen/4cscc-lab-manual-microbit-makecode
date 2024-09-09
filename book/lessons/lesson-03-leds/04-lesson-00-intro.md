@@ -8,5 +8,5 @@ LEDs are diodes. A diode is an electronic component that acts like a one-way str
 
 ![led-diagram](assets/led-diagram.png)
 
-The anode is the **positive terminal**, connected to the longer leg of the LED (usually indicated by a notch on the LED casing). The cathode is the **negative terminal**, connected to the shorter leg (usually indicated by a flat edge on the LED casing).
+The anode is the **positive terminal** marked with a (`+`) connected to the longer leg of the LED (usually indicated by a notch on the LED casing). The cathode is the **negative terminal** marked with a (`-`), connected to the shorter leg (usually indicated by a flat edge on the LED casing).
 

@@ -22,7 +22,7 @@ Select one of the built-in images.
 
 ![makecode-show-image-05](assets/makecode-show-image-05.png)
 
-The image you chose is replaces the default heart image.
+The image you chose replaces the default heart image.
 
 ![makecode-show-image-06](assets/makecode-show-image-06.png)
 
