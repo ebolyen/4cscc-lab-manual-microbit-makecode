@@ -2,7 +2,7 @@
 
 # Using the Light Sensor
 
-This section will focus on the micro: bit's light-sensing capabilities. The micro:bit has no dedicated light sensor, but the LED display can act like a primitive light sensor.
+This section will focus on the micro:bit's light-sensing capabilities. The micro:bit has no dedicated light sensor, but the LED display can act like a primitive light sensor.
 
 ![microbit-display](assets/microbit-display.png)
 

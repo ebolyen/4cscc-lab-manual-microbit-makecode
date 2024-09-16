@@ -6,6 +6,8 @@
 
 The Kitronik Air Quality and Environmental Board has a 128×64 pixel Organic Light Emitting Diode (OLED) display. The OLED can be used to display information like numbers and words. It helps you see data from the sensors on the board, like air quality and temperature, in real-time.
 
+The “O” in OLED stands for “organic,” which means the display is made using special carbon-based materials. These materials can light up when electricity passes through them, allowing OLED screens to produce bright, colorful images. The term “organic” here refers to the chemical structure of the materials, not to something living.
+
 
 ![kitronik-aqb-oled](assets/kitronik-aqb-oled.png)
 
@@ -17,7 +19,7 @@ The Kitronik Air Quality and Environmental Board has a BME688 sensor to measure 
 
 ## Zip Status LEDs
 
-The Kitronik Air Quality and Environmental Board has three Zip Status LEDs are individually multicolored programmable LEDs that can be used in your projects. These LEDs can be used as status lights for sensors, change colors with different sensor values.
+The Kitronik Air Quality and Environmental Board has three Zip Status LEDs that are individually multicolored programmable LEDs that can be used in your projects. These LEDs can be used as status lights for sensors, change colors with different sensor values.
 
 ![kitronik-aqb-zip](assets/kitronik-aqb-zip.png)
 
@@ -48,16 +50,20 @@ The power LED indicates that the power on the Kitronik Air Quality and Environme
 
 ## Power Switch
 
-The power switch allows you to turn off the Kitronik Air Quality and Environmental Board when it is not in use.
+The power switch allows you to turn off the Kitronik Air Quality and Environmental Board when is powered on.
 
 ![kitronik-aqb-power-switch](assets/kitronik-aqb-power-switch.png)
 
 ## Micro USB Connector
 
-This conn
+This connector is an alternative way to power the board. This port can attach rechargeable battery packs with a maximum voltage of 5 volts.
+
+.
 ![kitronik-aqb-usb](assets/kitronik-aqb-usb.png)
 
-## Solar Penel Input
+## Solar Panel Input
+
+The solar panel input can be used to attach solar panels with a maximum voltage of 5 volts to power the device. The solar panel can also be used to carge rechargable batteries attached to the battery pack.
 
 ![kitronik-aqb-solar](assets/kitronik-aqb-solar.png)
 

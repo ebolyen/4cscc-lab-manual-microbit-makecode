@@ -42,7 +42,7 @@ The duplicated block is over the duplicated block.
 
 ![makecode-button-led-08](assets/makecode-button-led-08.png)
 
-Move the new block to the side. Notice how the block is a different color than the other block. This is becaise the code is the same, and MakeCode will ignore duplicated blocks.
+Move the new block to the side. Notice how the block is a different color than the other block. This is because the code is the same, and MakeCode will ignore duplicated blocks.
 
 ![makecode-button-led-09](assets/makecode-button-led-09.png)
 
@@ -64,7 +64,7 @@ Change the digital signal from `0` to `1`.
 
 The program is now complete, and button `A` should turn the LED off and button `B` will turn the LED on. 
 
-Try switch the values so button `A` turns the LED on and button `B` turns the LED off.
+Try switching the values so button `A` turns the LED on and button `B` turns the LED off.
 
 A complete project can be opened below:
 

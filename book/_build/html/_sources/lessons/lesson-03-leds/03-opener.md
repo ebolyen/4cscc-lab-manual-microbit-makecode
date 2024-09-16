@@ -11,7 +11,7 @@
 
 ### Prepare to Share:
 
-- Be ready to share one or two things you observed about the LED with the class.
+- Be ready to share one or two observations you observed about the LED with the class.
 
 ### Participate in Discussion: 
 

@@ -16,4 +16,4 @@ After you select the extension, the blocks are now available in MakeCode.
 
 ![makecode-kitronik-aqb-loading-extension-02](assets/makecode-kitronik-aqb-loading-extension-02.png)
 
-A MakeCode link to the extension preloaded can be opened [here](https://makecode.microbit.org/S54121-21065-98697-32959) (right-click and open in a new tab or window).
+MakeCode starter code with the extension extension preloaded can be opened [here](https://makecode.microbit.org/S54121-21065-98697-32959) (right-click and open in a new tab or window).

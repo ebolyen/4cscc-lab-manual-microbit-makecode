@@ -6,6 +6,8 @@ An OLED display is a type of screen used in many devices, such as phones and TVs
 
 ![kitronik-aqb-oled-coordinates](assets/kitronik-aqb-oled-coordinates.png)
 
+The picture above shows the dimensions of the OLED screen. The coordinates start on the upper left corner of the OLED screen. The screen is 128 pixels in width on the x-axis and 64 pixels in height on the y-axis.
+
 ---
 
 ## Using the OLED Display on the Kitronik Air Quality and Environmental Board
@@ -57,15 +59,17 @@ Drag the empty string block into the first oval.
 
 ![makecode-kitronik-aqb-display-11](assets/makecode-kitronik-aqb-display-11.png)
 
-Type "Fout Corners Science and Computing Club" in the empty string block. Run the code on the micro:bit.
+Type "Four Corners Science and Computing Club" in the empty string block. Run the code on the micro:bit.
 
 ![makecode-kitronik-aqb-display-12](assets/makecode-kitronik-aqb-display-12.png)
 
-Notice how the text runs to the next line.
+Notice how the text runs to the next line. 
 
 TODO: ADD PHOTO OF THE OUTPUT
 
-When the text runs to the next line, the micro:bit does not understand word boundaries. Part of a word may be at the end of the line, and the remaining part will be on the next line. It is probably best to break up longer strings into multiple lines. Duplicate the existing block. Duplicating blocks is often faster than searching for the block again in the Toolbox.
+The micro:bit does not understand word boundaries. This means a word could be split between two lines, with part of it at the end of one line and the rest at the start of the next. To avoid this, it’s best to break up longer strings into multiple lines. You can duplicate the existing block to do this, as it's usually quicker than finding the block again in the Toolbox. 
+
+There is no set character limit for the lines on the OLED, as some characters are wider than others. It is best to test your code for readability and modify it to be displayed as you intend it to be displayed.
 
 ![makecode-kitronik-aqb-display-13](assets/makecode-kitronik-aqb-display-13.png)
 
@@ -85,7 +89,7 @@ Modify the text so "Four Corners Science and Computing Club" is displayed on two
 
 ![makecode-kitronik-aqb-display-17](assets/makecode-kitronik-aqb-display-17.png)
 
-Notice that the line number is still one. This must be changed or only one line of text will be displayed.
+Notice that the line number is still `1`. This must be changed or only one line of text will be displayed.
 
 ![makecode-kitronik-aqb-display-18](assets/makecode-kitronik-aqb-display-18.png)
 

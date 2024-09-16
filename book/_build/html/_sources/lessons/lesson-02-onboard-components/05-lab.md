@@ -38,6 +38,6 @@ In this lab, you will design and build a fidget device using the BBC micro:bit. 
    - When a loud sound is detected, make the buzzer sound.
    - When the device is tilted, change the display on the LED matrix.
 5. **Test your device:** After you’ve written your code, download it to your micro:bit and test your device. Make sure all the inputs and outputs are working as expected.
-6. **Document your work:** Take pictures or videos of your device in action. Write a brief report explaining your design process, how you coded your device, any challenges you faced, and how you overcame them.
+6. **Document your work:** Take pictures or videos of your device in action. Write a brief report (3-5 paragraphs) explaining your design process, how you coded your device, any challenges you faced, and how you overcame them.
 7. **Present your work:** Prepare a short presentation to share your fidget device with the class. Demonstrate each input/output reaction and explain how you created it.
 8. **Reflection**: Write a brief report explaining the logic behind your code and how it results in a fidget device with at least five input/output reactions.

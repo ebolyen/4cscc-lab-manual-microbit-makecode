@@ -20,11 +20,11 @@ Take a 47Ω resistor and place one lead in the same row as the red lead on the 
 
 ![kitronik-rgb-led-02](assets/kitronik-rgb-led-02.png)
 
-Take another 47Ω resistor. Place one lead in the same row as the green lead, and the other lead a few rows away from it as the row with green lead on the RGB LED.
+Take another 47Ω resistor. Place one lead in the same row as the green lead, and the other lead a few rows away from it as you did with the red lead on the RGB LED.
 
 ![kitronik-rgb-led-03](assets/kitronik-rgb-led-03.png)
 
-Take another 47Ω resistor. Place one lead in the same row as the blue lead, and the other lead a few rows away from it as the row with blue lead on the RGB LED. Make sure that the green and blue leads and respective resistors are on different rows.
+Take another 47Ω resistor. Place one lead in the same row as the blue lead, and the other lead a few rows away from it (as you did with the red and green leads) on the RGB LED. Make sure that the green and blue leads and respective resistors are on different rows. Having the resistors connected to the incorrect leads will lead to an incomplete circuit.
 
 ![kitronik-rgb-led-04](assets/kitronik-rgb-led-04.png)
 
@@ -48,5 +48,6 @@ This circuit should be similar to the circuit displayed below:
 
 ![kitronik-rgb-led-09](assets/kitronik-rgb-led-09.png)
 
+## Predict and Explain
 
-
+Now that you have built your circuit, predict how electricity will flow through it using the RGB Color Code Model (`255`, `0`, `0`) or (`0`, `255`, `0`). Trace the flow of electricity through this system. Do you think the voltage changes using a different code, like (`150`, `100`, `50`)? How would a change in voltage affect the current flowing through the circuit, and what impact would this have on the LEDs? If you changed resistors, how would their values impact the voltage and current for each LED color?

@@ -6,4 +6,4 @@ In this lesson, you will learn how to use a common cathode RGB LED with the micr
 
 ![rgb-led](assets/rgb-led.jpeg)
 
-This lesson will use components from the Kitronik 
+This lesson will use components from the Kitronik Inventor's Kit to build a circuit using an RGB LED.

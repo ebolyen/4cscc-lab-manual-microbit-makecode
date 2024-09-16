@@ -2,7 +2,7 @@
 
 # Lesson 5: Atmospheric Sensing
 
-In this lesson
+In this lesson you will be learning about how to measure air quality using the BBC micro:bit. 
 
 ## The Kitronik Air Quality and Environmental Board
 

@@ -43,7 +43,7 @@ Duplicate the `digital write` block.
 
 ![makecode-blink-one-led-09](assets/makecode-blink-one-led-09.png)
 
-Select the duplicated `digital write` block.
+The duplicated block appaears over the original blocks. .Select the duplicated `digital write` block.
 
 ![makecode-blink-one-led-10](assets/makecode-blink-one-led-10.png)
 
@@ -51,7 +51,7 @@ Place it below the `pause` block in the forever block.
 
 ![makecode-blink-one-led-11](assets/makecode-blink-one-led-11.png)
 
-Change the value from `0` to `1`.
+Change the value from `1` to `0`.
 
 ![makecode-blink-one-led-12](assets/makecode-blink-one-led-12.png)
 
@@ -79,7 +79,7 @@ Change the value in the other `pause` block from `100` to `500`.
 
 ![makecode-blink-one-led-18](assets/makecode-blink-one-led-18.png)
 
-Now that both values are `500` code will turn the LED on for half a second and turn the LED off for half a second.
+Now both values are `500` code will turn the LED on for half a second and turn the LED off for half a second.
 
 ![makecode-blink-one-led-19](assets/makecode-blink-one-led-19.png)
 

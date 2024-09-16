@@ -6,7 +6,7 @@ In the previous section about RGB Color Codes, we covered the colors red, green,
 
 ![rrgb-color-code-chart-02](assets/rgb-color-code-chart-02.png)
 
-The Venn diagram below simulates how the colors mix to create these colors. The only values not represented above are (0, 0, 0). These are the values to turn the RGB LED off.
+The Venn diagram below simulates how the colors mix to create these colors. The only values not represented above are (`0`, `0`, `0`). These are the values to turn the RGB LED off.
 
 ![venn-rgb-color](assets/venn-rgb-color.png)
 

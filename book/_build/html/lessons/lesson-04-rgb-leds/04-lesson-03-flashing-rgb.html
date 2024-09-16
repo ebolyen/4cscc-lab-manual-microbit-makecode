@@ -521,32 +521,34 @@ document.write(`
 <p><img alt="makecode-rgb-led-06" src="../../_images/makecode-rgb-led-06.png" /></p>
 <p>Place the duplicated <code class="docutils literal notranslate"><span class="pre">analog</span> <span class="pre">write</span></code> blocks in the forever loop.</p>
 <p><img alt="makecode-rgb-led-07" src="../../_images/makecode-rgb-led-07.png" /></p>
-<p>You now need to change the pins to match the pins on the leads in the circuit built in the previous section.</p>
+<p>Next, you need to change the pins to match the pins on the leads in the circuit you built in the previous section.</p>
 <p><img alt="makecode-rgb-led-08" src="../../_images/makecode-rgb-led-08.png" /></p>
-<p>The red lead is attached to <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">P0</span></code> in MakeCode, the green is attached to <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">P1</span></code>, and the blue is attached to <code class="docutils literal notranslate"><span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">P2</span></code> in MakeCode.</p>
+<p>The red lead is attached to <code class="docutils literal notranslate"><span class="pre">0</span></code> (<code class="docutils literal notranslate"><span class="pre">P0</span></code> in MakeCode), the green is attached to <code class="docutils literal notranslate"><span class="pre">1</span></code> (<code class="docutils literal notranslate"><span class="pre">P1</span></code> in MakeCode), and the blue is attached to <code class="docutils literal notranslate"><span class="pre">2</span></code> (<code class="docutils literal notranslate"><span class="pre">P2</span></code> in MakeCode). Now each of these blocks will control one of the leads on the LED.</p>
 <p><img alt="makecode-rgb-led-09" src="../../_images/makecode-rgb-led-09.png" /></p>
-<p>These values will represent the three leads of the RGB LED.</p>
+<p>The values in each block will control the brightness associated with each lead. The values of the three blocks connected to the three leads of the RGB LED will represent the values of RGB color codes. The default range of <code class="docutils literal notranslate"><span class="pre">analog</span> <span class="pre">write</span></code> is between 0 and 1023. We will be using the range between  <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">255</span></code> to simulate RGB color codes.</p>
 <p><img alt="makecode-rgb-led-10" src="../../_images/makecode-rgb-led-10.png" /></p>
-<p>Changing the first value to <code class="docutils literal notranslate"><span class="pre">255</span></code> and the others to <code class="docutils literal notranslate"><span class="pre">0</span></code> will produce a red light. Duplicate these three blocks twice and place them in the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block.</p>
+<p>Changing the first value on <code class="docutils literal notranslate"><span class="pre">P0</span></code> to  <code class="docutils literal notranslate"><span class="pre">255</span></code> and the other values on <code class="docutils literal notranslate"><span class="pre">P1</span></code> and <code class="docutils literal notranslate"><span class="pre">P2</span></code>  to <code class="docutils literal notranslate"><span class="pre">0</span></code> will produce a red light (<code class="docutils literal notranslate"><span class="pre">255</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>). Duplicate these three blocks twice and place them in the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block.</p>
 <p><img alt="makecode-rgb-led-11" src="../../_images/makecode-rgb-led-11.png" /></p>
+<p>To make our LED flash red, green, and blue, we must duplicate these three blocks twice and place them in the forever block. You can see in the image that the three blocks in the red square will tell the light to flash red. The second three blocks will tell the light to flash green, and the last three blocks will tell the light to flash blue. Change the values in your code accordingly.</p>
 <p>Change the values to represent the three colors with the following:</p>
 <ul class="simple">
-<li><p>red being (255, 0, 0)</p></li>
-<li><p>green being (0, 255, 0)</p></li>
-<li><p>and blue being (0, 0, 255)</p></li>
+<li><p>red: (<code class="docutils literal notranslate"><span class="pre">255</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>)</p></li>
+<li><p>green: (<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">255</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>)</p></li>
+<li><p>blue:  (<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">255</span></code>)</p></li>
 </ul>
+<p>How would you change the values in the blocks to turn on only the green light? Only the blue light? What color light would you make if you changed these values to (<code class="docutils literal notranslate"><span class="pre">255</span></code>, <code class="docutils literal notranslate"><span class="pre">255</span></code>, <code class="docutils literal notranslate"><span class="pre">255</span></code>)?</p>
 <p><img alt="makecode-rgb-led-12" src="../../_images/makecode-rgb-led-12.png" /></p>
-<p>To make the less stay on we need to place <code class="docutils literal notranslate"><span class="pre">pause</span></code> blocks after each color. Select the “Basic” drawer in the Toolbox.</p>
+<p>To make the light stay on long enough for us to see it, we need to place <code class="docutils literal notranslate"><span class="pre">pause</span></code> blocks after each color. Select the “Basic” drawer in the Toolbox.</p>
 <p><img alt="makecode-rgb-led-13" src="../../_images/makecode-rgb-led-13.png" /></p>
 <p>Select the <code class="docutils literal notranslate"><span class="pre">delay</span></code> block.</p>
 <p><img alt="makecode-rgb-led-14" src="../../_images/makecode-rgb-led-14.png" /></p>
-<p>Place a <code class="docutils literal notranslate"><span class="pre">delay</span></code> block after every color.</p>
+<p>Place a <code class="docutils literal notranslate"><span class="pre">pause</span></code> block after every color.</p>
 <p><img alt="makecode-rgb-led-15" src="../../_images/makecode-rgb-led-15.png" /></p>
-<p>The duration of the <code class="docutils literal notranslate"><span class="pre">delay</span></code> block can be changed. Remember that the <code class="docutils literal notranslate"><span class="pre">100</span></code> is 100 milliseconds or 0.10 seconds.</p>
+<p>The duration of the <code class="docutils literal notranslate"><span class="pre">pause</span></code> block can be changed. Remember that the <code class="docutils literal notranslate"><span class="pre">100</span></code> is 100 milliseconds or 0.10 seconds.</p>
 <p><img alt="makecode-rgb-led-16" src="../../_images/makecode-rgb-led-16.png" /></p>
 <p>The delay can be changed to make the colors alternate slower.</p>
 <p><img alt="makecode-rgb-led-17" src="../../_images/makecode-rgb-led-17.png" /></p>
-<p>This examples changes the color every <code class="docutils literal notranslate"><span class="pre">500</span></code> milliseconds or every half a second.</p>
+<p>This example changes the color every <code class="docutils literal notranslate"><span class="pre">500</span></code> milliseconds or every half a second.</p>
 <p><img alt="makecode-rgb-led-18" src="../../_images/makecode-rgb-led-18.png" /></p>
 <p>The program is now complete. The LED should alternate red, green, and blue every half a second.</p>
 </section>

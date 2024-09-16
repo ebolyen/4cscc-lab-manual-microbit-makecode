@@ -52,7 +52,7 @@ Duplicate the `analog write` block twice.
 
 ![makecode-rgb-led-function-12](assets/makecode-rgb-led-function-12.png)
 
-Place the two duplicated `analog write` blocks in the `red` function. Change the pins as in the previous lesson. Change the values to illuminate the RGB LED red (255, 0, 0).  
+Place the two duplicated `analog write` blocks in the `red` function. Change the pins as in the previous lesson. Change the values to illuminate the RGB LED red (`255`, `0`, `0`).  
 
 ![makecode-rgb-led-function-13](assets/makecode-rgb-led-function-13.png)
 
@@ -72,7 +72,7 @@ The names of the `function` blocks and the values now must be changed.
 
 ![makecode-rgb-led-function-17](assets/makecode-rgb-led-function-17.png)
 
-Change the names of the one function name to `green` with the green values (0, 255, 0). Change the other function name to `blue` with the blue values (0, 0, 255).
+Change the names in the duplicated function boxes to green with green values (`0`, `255`, `0`) and blue with blue values (`0`, `0`, `255`).
 
 ![makecode-rgb-led-function-18](assets/makecode-rgb-led-function-18.png)
 
@@ -88,11 +88,11 @@ As in the previous section, you will add delays to control the duration that the
 
 ![makecode-rgb-led-function-22](assets/makecode-rgb-led-function-22.png)
 
-Select the `delay` block.
+Select the `pause` block.
 
 ![makecode-rgb-led-function-23](assets/makecode-rgb-led-function-23.png)
 
-Place the `delay` block after the `call red` block. Change the duration that red will stay on.
+Place the `pause` block after the `call red` block. Change the duration for which red will stay on.
 
 ![makecode-rgb-led-function-24](assets/makecode-rgb-led-function-24.png)
 
@@ -100,12 +100,12 @@ In this example, we will use `500` again, but feel free to experiment with the d
 
 ![makecode-rgb-led-function-25](assets/makecode-rgb-led-function-25.png)
 
-Duplicate the `delay` block twice.
+Duplicate the `pause` block twice.
 
 ![makecode-rgb-led-function-26](assets/makecode-rgb-led-function-26.png)
 
-Place the duplicated `delay` blocks after the `call` boxed.
+Place the duplicated `pause` blocks after the `call` boxed.
 
 ![makecode-rgb-led-function-27](assets/makecode-rgb-led-function-27.png)
 
-The program is now complete. The LED should alternate red, green, and blue every half a second using functions.
+The program is now complete. The LED should alternate red, green, and blue every half a second using functions. Now that you have defined red, blue and green, you can call on these functions in future codes you write.

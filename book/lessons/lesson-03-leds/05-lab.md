@@ -29,7 +29,7 @@ In this lab, you will simulate a stoplight using the BBC micro:bit
    - Connect the components to the Kitronik prototyping breakout board.
 4. **Code your device:** Using the MakeCode editor, write code to control your device.
    - Think of a stoplight:
-     - What is the sequance of the different lights?
+     - What is the sequence of the different lights?
      - What are possible durations for the lights?
      - Can you use a button to trigger the stoplight? **(Not required)**
    - Write code to reflect the values.

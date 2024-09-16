@@ -30,19 +30,19 @@ Rearrange the blocks to make the workspace cleaner.
 
 ![makecode-buttons-06](assets/makecode-buttons-06.png)
 
-Click on the arrow on the drodown menu on one of the duplicated blocks and change the value to `B`.
+Click on the arrow on the dropdown menu on one of the duplicated blocks and change the value to `B`.
 
 ![makecode-buttons-07](assets/makecode-buttons-07.png)
 
-The block changes colors and will will not be ignored.
+The block changes colors and wilpl not be ignored.
 
 ![makecode-buttons-08](assets/makecode-buttons-08.png)
 
-Click on the arrow on the drodown menu on the remaining duplicated block and change the value to `A + B`.
+Click on the arrow on the dropdown menu on the remaining duplicated block and change the value to `A + B`.
 
 ![makecode-buttons-09](assets/makecode-buttons-09.png)
 
-This block changes colors too, and will will not be ignored.
+This block changes colors too, and will not be ignored.
 
 ![makecode-buttons-10](assets/makecode-buttons-10.png)
 
@@ -82,7 +82,7 @@ In this example, the happy face icon will display when button B is pressed.
 
 ![makecode-buttons-21](assets/makecode-buttons-21.png)
 
-You need one more action for when for your remaining block. Click on the "Basic" drawer in the Toolbox again.
+You need one more action for your remaining block. Click on the "Basic" drawer in the Toolbox again.
 
 ![makecode-buttons-22](assets/makecode-buttons-22.png)
 

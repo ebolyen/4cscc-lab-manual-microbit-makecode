@@ -30,7 +30,7 @@ A new window will open. Type "oled" in the search box. Select the first extensio
 
 ![makecode-extension-oled-02](assets/makecode-extension-oled-02.png)
 
-Note that there are two extensions that have "Tinkeracadeny" in the description.
+Note that there are two extensions that have "Tinkeracademy" in the description.
 
 ![makecode-extension-oled-03](assets/makecode-extension-oled-03.png)
 
@@ -38,7 +38,7 @@ To make sure that the version used in this manual is selected. Click on "Learn M
 
 ![makecode-extension-oled-04](assets/makecode-extension-oled-04.png)
 
-The documentation shoul have "tinkeracademy" in the name.
+The documentation should have "Tinkeracademy" in the name.
 
 ![makecode-extension-oled-05](assets/makecode-extension-oled-05.png)
 
@@ -47,5 +47,5 @@ After you select the extension, the blocks are now available in MakeCode.
 
 ![makecode-extension-oled-06](assets/makecode-extension-oled-06.png)
 
-A MakeCode link with both extensions preloaded can be opened [here](https://makecode.microbit.org/S32158-93017-54044-05128) (right-click and open in new window).
+A MakeCode link with both extensions preloaded can be opened [here](https://makecode.microbit.org/S32158-93017-54044-05128) (right-click and open in new window). Be sure to click on ‘edit code’ in the gray box in the upper right corner.
 

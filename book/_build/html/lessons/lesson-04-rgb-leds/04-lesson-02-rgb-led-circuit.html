@@ -479,7 +479,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -495,6 +497,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-and-explain">Predict and Explain</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -516,9 +526,9 @@ document.write(`
 <p><img alt="kitronik-rgb-led-01" src="../../_images/kitronik-rgb-led-01.png" /></p>
 <p>Take a 47Ω resistor and place one lead in the same row as the red lead on the RGB LED and the other lead a few rows away from it.</p>
 <p><img alt="kitronik-rgb-led-02" src="../../_images/kitronik-rgb-led-02.png" /></p>
-<p>Take another 47Ω resistor. Place one lead in the same row as the green lead, and the other lead a few rows away from it as the row with green lead on the RGB LED.</p>
+<p>Take another 47Ω resistor. Place one lead in the same row as the green lead, and the other lead a few rows away from it as you did with the red lead on the RGB LED.</p>
 <p><img alt="kitronik-rgb-led-03" src="../../_images/kitronik-rgb-led-03.png" /></p>
-<p>Take another 47Ω resistor. Place one lead in the same row as the blue lead, and the other lead a few rows away from it as the row with blue lead on the RGB LED. Make sure that the green and blue leads and respective resistors are on different rows.</p>
+<p>Take another 47Ω resistor. Place one lead in the same row as the blue lead, and the other lead a few rows away from it (as you did with the red and green leads) on the RGB LED. Make sure that the green and blue leads and respective resistors are on different rows. Having the resistors connected to the incorrect leads will lead to an incomplete circuit.</p>
 <p><img alt="kitronik-rgb-led-04" src="../../_images/kitronik-rgb-led-04.png" /></p>
 <p>Take a male-to-female jumper wire and place the female end on pin <code class="docutils literal notranslate"><span class="pre">0</span></code> on the Kitronik prototyping plate breakout board. Place the male lead in the row, linking the red lead with a resistor.</p>
 <p><img alt="kitronik-rgb-led-05" src="../../_images/kitronik-rgb-led-05.png" /></p>
@@ -530,6 +540,10 @@ document.write(`
 <p><img alt="kitronik-rgb-led-08" src="../../_images/kitronik-rgb-led-08.png" /></p>
 <p>This circuit should be similar to the circuit displayed below:</p>
 <p><img alt="kitronik-rgb-led-09" src="../../_images/kitronik-rgb-led-09.png" /></p>
+<section id="predict-and-explain">
+<h2>Predict and Explain<a class="headerlink" href="#predict-and-explain" title="Link to this heading">#</a></h2>
+<p>Now that you have built your circuit, predict how electricity will flow through it using the RGB Color Code Model (<code class="docutils literal notranslate"><span class="pre">255</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>) or (<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">255</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>). Trace the flow of electricity through this system. Do you think the voltage changes using a different code, like (<code class="docutils literal notranslate"><span class="pre">150</span></code>, <code class="docutils literal notranslate"><span class="pre">100</span></code>, <code class="docutils literal notranslate"><span class="pre">50</span></code>)? How would a change in voltage affect the current flowing through the circuit, and what impact would this have on the LEDs? If you changed resistors, how would their values impact the voltage and current for each LED color?</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -586,6 +600,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-and-explain">Predict and Explain</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

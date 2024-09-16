@@ -4,7 +4,7 @@
 
 ## Objective:
 
-In this lab, you will flash an RGB LED red, green, blue, magenta, yellow, cyan and white.
+In this lab, you will flash an RGB LED red, green, blue, magenta, yellow, cyan, and white.
 
 ## Materials:
 
@@ -32,6 +32,6 @@ In this lab, you will flash an RGB LED red, green, blue, magenta, yellow, cyan a
    - What is the duration you want the different colors to stay on?
    - Write code to reflect the values.
 5. **Test your device:** After you’ve written your code, download it to your micro:bit and test your device. Make sure all the colors are flashing (red, green, blue, magenta, yellow, cyan and white). The sequence the colors flash is not important. Just make sure it matches the sequence you deternined.
-6. **Document your work:** Take pictures or videos of  RGB LED flashing the different colors. Write a brief report explaining your design process, how you coded your device, any challenges you faced, and how you overcame them.
-7. **Present your work:** Prepare a short presentation to share your flashing LED with the class.
+6. **Document your work:** Take pictures or videos of  RGB LED flashing the different colors. Write a brief report explaining your design process, how you coded your device, any challenges you faced, and how you overcame them. How might you apply a system like this in the real world?
+7. **Present your work:** Prepare a short presentation to share your flashing LED with the class. How might you apply a system like this in the real world?
 8. **Reflection**: Write a brief report explaining the logic behind your code.

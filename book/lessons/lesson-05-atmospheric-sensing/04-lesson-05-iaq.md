@@ -16,7 +16,7 @@ Equivalent carbon dioxide (eCO2), is a measure of the total impact of various gr
 
 ---
 
-## Measuring Indoor Air Quality (IAQ) with the micro:bit and Kitronik Air Quality and Environmental Board
+## Measuring Air Quality Index (AQI) with the micro:bit and Kitronik Air Quality and Environmental Board
 
 As in the previous lesson we have to initialize the display. Select the "Display" drawer in the Toolbox. 
 
@@ -90,7 +90,7 @@ Place the block in the first oval that holds strings.
 
 ![makecode-kitronik-aqb-air-quality-18](assets/makecode-kitronik-aqb-air-quality-18.png)
 
-Clear the text in all three ovals to create empty strings.
+Clear the text in the two ovals to create empty strings.
 
 ![makecode-kitronik-aqb-air-quality-19](assets/makecode-kitronik-aqb-air-quality-19.png)
 
@@ -106,13 +106,13 @@ Place the block in the `forever` block below the other block as displayed below:
 
 ![makecode-kitronik-aqb-air-quality-22](assets/makecode-kitronik-aqb-air-quality-22.png)
 
-The data the micro:bit we will be reading is IAQ score and the eCO2 level. The eCO2 level is measured in parts per million (ppm). 
+The data the micro:bit we will be reading is AQI score and the eCO2 level. The eCO2 level is measured in parts per million (ppm). 
 
-The data will need to be represented as two separate strings for the IAQ and three separate strings for the eCO2.
+The data will need to be represented as two separate strings for the AQI and three separate strings for the eCO2.
 
 | Sting 1          | String 2    | String 3 |
 | ---------------- | ----------- | -------- |
-| `"IAQ Score : "` | `iaq_data`  | NONE     |
+| `"AQI Score : "` | `aq1_data`  | NONE     |
 | `"eCO2: "`       | `ec02_data` | `" ppm"` |
 
 This will require a third string for the eCO2 only. Add another sting box with the `+` button.
@@ -127,7 +127,7 @@ Enter the data as determined above. Make sure to enter the whitespace. These spa
 
 | String 1         | String 2    | String 3 |
 | ---------------- | ----------- | -------- |
-| `"IAQ Score : "` | `iaq_data`  | NONE     |
+| `"AQI Score : "` | `aqi_data`  | NONE     |
 | `"eCO2: "`       | `ec02_data` | `"       |
 
 ![makecode-kitronik-aqb-air-quality-25](assets/makecode-kitronik-aqb-air-quality-25.png)
@@ -144,11 +144,11 @@ Place them in the corresponding text fields.
 
 ![makecode-kitronik-aqb-air-quality-28](assets/makecode-kitronik-aqb-air-quality-28.png)
 
-The code as it is will output the text of both measurments on the first line with only one visible.
+The code, as it is, will output the text for both measurements on the first line with only one visible
 
 ![makecode-kitronik-aqb-air-quality-29](assets/makecode-kitronik-aqb-air-quality-29.png)
 
-Change the line number to `1` .
+Change the line number to `2` .
 
 ![makecode-kitronik-aqb-air-quality-30](assets/makecode-kitronik-aqb-air-quality-30.png)
 

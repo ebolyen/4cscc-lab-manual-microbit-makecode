@@ -64,6 +64,8 @@ Place the `join` block in the `show string` block.
 
 ![makecode-weatherbit-ws-wd-15](assets/makecode-weatherbit-ws-wd-15.png)
 
+Select
+
 ![makecode-weatherbit-ws-wd-16](assets/makecode-weatherbit-ws-wd-16.png)
 
 ![makecode-weatherbit-ws-wd-17](assets/makecode-weatherbit-ws-wd-17.png)

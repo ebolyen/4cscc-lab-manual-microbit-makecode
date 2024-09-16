@@ -2,9 +2,9 @@
 
 # Measuring Temperature Humidity and Atmospheric Pressure
 
-## What is Celcius?
+## What is Celsius?
 
-Celsius is a way to measure temperature. It's named after a scientist named Anders Celsius. In Celsius, water freezes at 0 degrees and boils at 100 degrees. So, if it's 20 degrees Celsius outside, it's not too cold or too hot—it's just right for a lot of people. Scientists use Celsius because it's easy to understand and it's based on how water behaves at different temperatures.
+Celsius is a way to measure temperature. It's named after a scientist named Anders Celsius. In Celsius, water freezes at 0 degrees and boils at 100 degrees. So, if it's 20 degrees Celsius outside, it's not too cold or too hot—it's just right for a lot of people. Scientists use Celsius because it's easy to understand and it's based on how water behaves at different temperatures. ●   In the United States, we use Fahrenheit for temperature. Compare and contrast the differences between Celsius and Fahrenheit in the image below. 
 
 ![c-f-examples](assets/c-f-examples.png)
 
@@ -84,25 +84,25 @@ Select the "Text" drawer in "Advanced" drawer in the Toolbox.
 
 ![makecode-kitronik-aqb-temperature-15](assets/makecode-kitronik-aqb-temperature-15.png)
 
-Select the `join` block. This block combines two strings. This block is necessary only if you combine two different strings from distinct sources, such as a sensor value or a variable.
+Select the `join` block. This block combines two strings represented by the two ovals containing the worlds “Hello” and “World”. You can add or remove strings by using the -/+ buttons to the right. This block is necessary only if you combine two different strings from distinct sources, such as a sensor value or a variable.
 
 ![makecode-kitronik-aqb-temperature-16](assets/makecode-kitronik-aqb-temperature-16.png)
 
-Place the block in the first oval that holds strings.
+Place the block in the first oval the `show` block.
 
 ![makecode-kitronik-aqb-temperature-17](assets/makecode-kitronik-aqb-temperature-17.png)
 
-The data the micro:bit we will be reading is temperature data in celsius, relative humidity and atmospheric pressure. Temperature data is often displayed with the C at the end to indicate that the reading is in celsius. Relative humidity is a percentage and is often followed by a `%`. Atmospheric pressure is often measured in Kilopascals (kPa). 
+The data the micro:bit we will be reading is temperature data in celsius, relative humidity and atmospheric pressure. Temperature data is often displayed with the C at the end to indicate that the reading is in Celsius. Relative humidity is a percentage and is often followed by a `%`. Atmospheric pressure is often measured in Kilopascals (kPa). 
 
 The data will need to be represented as three separate strings.
 
-| Sting 1           | String 2     | String 3 |
+| String 1          | String 2     | String 3 |
 | ----------------- | ------------ | -------- |
 | `"Temperature: "` | `temp_data`  | `" C"`   |
 | `"Humidity: "`    | `hum_data`   | `"%"`    |
 | `"Pressure: "`    | `press data` | `" kPa"` |
 
-This will require a third string. Add another sting box with the `+` button.
+This will require a third string. Add another string box with the `+` button.
 
 ![makecode-kitronik-aqb-display-20](assets/makecode-kitronik-aqb-display-20.png)
 
@@ -122,17 +122,17 @@ Place the blocks in the `forever` block below the other block as displayed below
 
 ![makecode-kitronik-aqb-temperature-21](assets/makecode-kitronik-aqb-temperature-21.png)
 
-Enter the data as determined above. Notice that there are spaces called **whitespace**. These spaces are necessary to have the Data display correctly. 
+Enter the corresponding strings into the first and third ovals as determined above. The first oval is the variable to be measured (Temperature, Humidity, Pressure) and needs to be placed within “ “ to ensure the program knows this is a string. Notice that there are spaces called **whitespace**. These spaces are necessary to have the Data display correctly. The third oval contains the labels for the units of measurement (C, %, kPa)
 
-| Sting 1           | String 2     | String 3 |
+| String 1          | String 2     | String 3 |
 | ----------------- | ------------ | -------- |
 | `"Temperature: "` | `temp_data`  | `" C"`   |
 | `"Humidity: "`    | `hum_data`   | `"%"`    |
-| `"Pressure: "`    | `press data` | `" hPa"` |
+| `"Pressure: "`    | `press data` | `" kPa"` |
 
 ![makecode-kitronik-aqb-temperature-22](assets/makecode-kitronik-aqb-temperature-22.png)
 
-The board reads atmospheric pressure in pascals. The preferred scale is kilopascals. There are 1000 pascals in one kilopascal. The out put must be divided by 1000 to convert it to kilopascals. This requires a l little math in the code. Select the `Math` drawer.
+The board reads atmospheric pressure in pascals. The preferred scale is kilopascals. There are 1000 pascals in one kilopascal. The output must be divided by 1000 to convert it to kilopascals. This requires a little math in the code. Select the `Math` drawer.
 
 ![makecode-kitronik-aqb-temperature-23](assets/makecode-kitronik-aqb-temperature-23.png)
 
@@ -140,7 +140,7 @@ Look for the division block.
 
 ![makecode-kitronik-aqb-temperature-24](assets/makecode-kitronik-aqb-temperature-24.png)
 
-Drag the division block into the text area of the block that displays text on the OLED.
+Drag the division block into the second oval (string) of the Pressure block.
 
 ![makecode-kitronik-aqb-temperature-25](assets/makecode-kitronik-aqb-temperature-25.png)
 
@@ -156,11 +156,11 @@ Select the `Read Temperature in`, `Read Pressure in`, and `Read Humidity` blocks
 
 ![makecode-kitronik-aqb-temperature-28](assets/makecode-kitronik-aqb-temperature-28.png)
 
-Place them in the corresponding text fields. Make sure that the `Read Pressure in` block is the dividend of the division block.
+Place them in the corresponding text fields (second oval). Make sure that the `Read Pressure in` block is the dividend (top) of the division block.
 
 ![makecode-kitronik-aqb-temperature-29](assets/makecode-kitronik-aqb-temperature-29.png)
 
-The code as it is will output the text for all three measurments on the first line with only one visible.
+The code, as it is, will output the text for all three measurements on the first line with only one visible.
 
 ![makecode-kitronik-aqb-temperature-30](assets/makecode-kitronik-aqb-temperature-30.png)
 

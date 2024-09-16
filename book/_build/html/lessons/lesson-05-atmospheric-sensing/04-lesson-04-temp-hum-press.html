@@ -502,7 +502,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-celcius">What is Celcius?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-celsius">What is Celsius?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-humidity">What is Humidity?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-atmospheric-pressure">What is Atmospheric Pressure?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-temperature-humidity-and-atmospheric-pressure-with-the-micro-bit-and-the-kitronik-air-quality-and-environmental-board">Measuring Temperature Humidity and Atmospheric Pressure with the micro:bit and the Kitronik Air Quality and Environmental Board</a></li>
@@ -520,9 +520,9 @@ document.write(`
   <p><img alt="header-lesson-05" src="../../_images/header-lesson-05.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="measuring-temperature-humidity-and-atmospheric-pressure">
 <h1>Measuring Temperature Humidity and Atmospheric Pressure<a class="headerlink" href="#measuring-temperature-humidity-and-atmospheric-pressure" title="Link to this heading">#</a></h1>
-<section id="what-is-celcius">
-<h2>What is Celcius?<a class="headerlink" href="#what-is-celcius" title="Link to this heading">#</a></h2>
-<p>Celsius is a way to measure temperature. It’s named after a scientist named Anders Celsius. In Celsius, water freezes at 0 degrees and boils at 100 degrees. So, if it’s 20 degrees Celsius outside, it’s not too cold or too hot—it’s just right for a lot of people. Scientists use Celsius because it’s easy to understand and it’s based on how water behaves at different temperatures.</p>
+<section id="what-is-celsius">
+<h2>What is Celsius?<a class="headerlink" href="#what-is-celsius" title="Link to this heading">#</a></h2>
+<p>Celsius is a way to measure temperature. It’s named after a scientist named Anders Celsius. In Celsius, water freezes at 0 degrees and boils at 100 degrees. So, if it’s 20 degrees Celsius outside, it’s not too cold or too hot—it’s just right for a lot of people. Scientists use Celsius because it’s easy to understand and it’s based on how water behaves at different temperatures. ●   In the United States, we use Fahrenheit for temperature. Compare and contrast the differences between Celsius and Fahrenheit in the image below.</p>
 <p><img alt="c-f-examples" src="../../_images/c-f-examples.png" /></p>
 </section>
 <section id="what-is-humidity">
@@ -568,15 +568,15 @@ document.write(`
 <p><img alt="makecode-kitronik-aqb-temperature-14" src="../../_images/makecode-kitronik-aqb-temperature-14.png" /></p>
 <p>Select the “Text” drawer in “Advanced” drawer in the Toolbox.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-15" src="../../_images/makecode-kitronik-aqb-temperature-15.png" /></p>
-<p>Select the <code class="docutils literal notranslate"><span class="pre">join</span></code> block. This block combines two strings. This block is necessary only if you combine two different strings from distinct sources, such as a sensor value or a variable.</p>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">join</span></code> block. This block combines two strings represented by the two ovals containing the worlds “Hello” and “World”. You can add or remove strings by using the -/+ buttons to the right. This block is necessary only if you combine two different strings from distinct sources, such as a sensor value or a variable.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-16" src="../../_images/makecode-kitronik-aqb-temperature-16.png" /></p>
-<p>Place the block in the first oval that holds strings.</p>
+<p>Place the block in the first oval the <code class="docutils literal notranslate"><span class="pre">show</span></code> block.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-17" src="../../_images/makecode-kitronik-aqb-temperature-17.png" /></p>
-<p>The data the micro:bit we will be reading is temperature data in celsius, relative humidity and atmospheric pressure. Temperature data is often displayed with the C at the end to indicate that the reading is in celsius. Relative humidity is a percentage and is often followed by a <code class="docutils literal notranslate"><span class="pre">%</span></code>. Atmospheric pressure is often measured in Kilopascals (kPa).</p>
+<p>The data the micro:bit we will be reading is temperature data in celsius, relative humidity and atmospheric pressure. Temperature data is often displayed with the C at the end to indicate that the reading is in Celsius. Relative humidity is a percentage and is often followed by a <code class="docutils literal notranslate"><span class="pre">%</span></code>. Atmospheric pressure is often measured in Kilopascals (kPa).</p>
 <p>The data will need to be represented as three separate strings.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Sting 1</p></th>
+<tr class="row-odd"><th class="head"><p>String 1</p></th>
 <th class="head"><p>String 2</p></th>
 <th class="head"><p>String 3</p></th>
 </tr>
@@ -597,7 +597,7 @@ document.write(`
 </tbody>
 </table>
 </div>
-<p>This will require a third string. Add another sting box with the <code class="docutils literal notranslate"><span class="pre">+</span></code> button.</p>
+<p>This will require a third string. Add another string box with the <code class="docutils literal notranslate"><span class="pre">+</span></code> button.</p>
 <p><img alt="makecode-kitronik-aqb-display-20" src="../../_images/makecode-kitronik-aqb-display-20.png" /></p>
 <p>Clear the text in all three ovals to create empty strings.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-18" src="../../_images/makecode-kitronik-aqb-temperature-18.png" /></p>
@@ -607,10 +607,10 @@ document.write(`
 <p><img alt="makecode-kitronik-aqb-temperature-20" src="../../_images/makecode-kitronik-aqb-temperature-20.png" /></p>
 <p>Place the blocks in the <code class="docutils literal notranslate"><span class="pre">forever</span></code> block below the other block as displayed below:</p>
 <p><img alt="makecode-kitronik-aqb-temperature-21" src="../../_images/makecode-kitronik-aqb-temperature-21.png" /></p>
-<p>Enter the data as determined above. Notice that there are spaces called <strong>whitespace</strong>. These spaces are necessary to have the Data display correctly.</p>
+<p>Enter the corresponding strings into the first and third ovals as determined above. The first oval is the variable to be measured (Temperature, Humidity, Pressure) and needs to be placed within “ “ to ensure the program knows this is a string. Notice that there are spaces called <strong>whitespace</strong>. These spaces are necessary to have the Data display correctly. The third oval contains the labels for the units of measurement (C, %, kPa)</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Sting 1</p></th>
+<tr class="row-odd"><th class="head"><p>String 1</p></th>
 <th class="head"><p>String 2</p></th>
 <th class="head"><p>String 3</p></th>
 </tr>
@@ -626,17 +626,17 @@ document.write(`
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;Pressure:</span> <span class="pre">&quot;</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">press</span> <span class="pre">data</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">hPa&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">kPa&quot;</span></code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p><img alt="makecode-kitronik-aqb-temperature-22" src="../../_images/makecode-kitronik-aqb-temperature-22.png" /></p>
-<p>The board reads atmospheric pressure in pascals. The preferred scale is kilopascals. There are 1000 pascals in one kilopascal. The out put must be divided by 1000 to convert it to kilopascals. This requires a l little math in the code. Select the <code class="docutils literal notranslate"><span class="pre">Math</span></code> drawer.</p>
+<p>The board reads atmospheric pressure in pascals. The preferred scale is kilopascals. There are 1000 pascals in one kilopascal. The output must be divided by 1000 to convert it to kilopascals. This requires a little math in the code. Select the <code class="docutils literal notranslate"><span class="pre">Math</span></code> drawer.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-23" src="../../_images/makecode-kitronik-aqb-temperature-23.png" /></p>
 <p>Look for the division block.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-24" src="../../_images/makecode-kitronik-aqb-temperature-24.png" /></p>
-<p>Drag the division block into the text area of the block that displays text on the OLED.</p>
+<p>Drag the division block into the second oval (string) of the Pressure block.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-25" src="../../_images/makecode-kitronik-aqb-temperature-25.png" /></p>
 <p>Type <code class="docutils literal notranslate"><span class="pre">1000</span></code> as the divisor of the division block.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-26" src="../../_images/makecode-kitronik-aqb-temperature-26.png" /></p>
@@ -644,9 +644,9 @@ document.write(`
 <p><img alt="makecode-kitronik-aqb-temperature-27" src="../../_images/makecode-kitronik-aqb-temperature-27.png" /></p>
 <p>Select the <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">Temperature</span> <span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">Pressure</span> <span class="pre">in</span></code>, and <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">Humidity</span></code> blocks</p>
 <p><img alt="makecode-kitronik-aqb-temperature-28" src="../../_images/makecode-kitronik-aqb-temperature-28.png" /></p>
-<p>Place them in the corresponding text fields. Make sure that the <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">Pressure</span> <span class="pre">in</span></code> block is the dividend of the division block.</p>
+<p>Place them in the corresponding text fields (second oval). Make sure that the <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">Pressure</span> <span class="pre">in</span></code> block is the dividend (top) of the division block.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-29" src="../../_images/makecode-kitronik-aqb-temperature-29.png" /></p>
-<p>The code as it is will output the text for all three measurments on the first line with only one visible.</p>
+<p>The code, as it is, will output the text for all three measurements on the first line with only one visible.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-30" src="../../_images/makecode-kitronik-aqb-temperature-30.png" /></p>
 <p>Change the line numbers to <code class="docutils literal notranslate"><span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
 <p><img alt="makecode-kitronik-aqb-temperature-31" src="../../_images/makecode-kitronik-aqb-temperature-31.png" /></p>
@@ -732,7 +732,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-celcius">What is Celcius?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-celsius">What is Celsius?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-humidity">What is Humidity?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-atmospheric-pressure">What is Atmospheric Pressure?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-temperature-humidity-and-atmospheric-pressure-with-the-micro-bit-and-the-kitronik-air-quality-and-environmental-board">Measuring Temperature Humidity and Atmospheric Pressure with the micro:bit and the Kitronik Air Quality and Environmental Board</a></li>
