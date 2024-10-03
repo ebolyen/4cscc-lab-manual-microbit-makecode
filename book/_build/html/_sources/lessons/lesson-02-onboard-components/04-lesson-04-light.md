@@ -2,7 +2,7 @@
 
 # Using the Light Sensor
 
-This section will focus on the micro:bit's light-sensing capabilities. The micro:bit has no dedicated light sensor, but the LED display can act like a primitive light sensor.
+This section will focus on the micro:bit's light-sensing capabilities. Although the micro:bit has no dedicated light sensor, the LED display can act like a primitive light sensor.
 
 ![microbit-display](assets/microbit-display.png)
 
@@ -30,4 +30,4 @@ Place the `light level` block in the `show string` block.
 
 ![makecode-light-06](assets/makecode-light-06.png)
 
-The code is now ready to be flashed on the micro:bit.
+The micro:bit is now ready to be flashed with code. Press the download button to transfer the code to the micro:bit.

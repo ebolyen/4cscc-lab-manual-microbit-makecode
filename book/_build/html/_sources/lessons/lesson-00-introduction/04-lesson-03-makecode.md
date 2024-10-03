@@ -7,7 +7,7 @@ The [MakeCode Editor for micro:bit](https://makecode.microbit.org/) is a block b
 ```{note}
 There are two versions of the MakeCode editor. One is specifically used for micro:bit: https://makecode.microbit.org/
 
-There is also a version of the MakeCode editor that is used to create arcade games. This version does not have the blocks to controle the micro:bit unless it is a micro:bit arcade device.
+There is also a version of the MakeCode editor that is used to create arcade games. This version does not have the blocks to control the micro:bit unless it is a micro:bit arcade device.
 
 ```
 
@@ -15,7 +15,7 @@ There is also a version of the MakeCode editor that is used to create arcade gam
 
 ## Signing Into MakeCode
 
-It is possible to use MakeCode without signing in, but projects may be deleted after a while or disappear if the browser history is cleared. To sign in, click on the "Sign In" button on the upper right corner:
+It is possible to use MakeCode without signing in, but projects may be deleted after a while or disappear if the browser history is cleared. To sign in, click on the "Sign In" button in the upper right corner:
 
 ![makecode-intro-02](assets/makecode-intro-02.png)
 
@@ -48,7 +48,7 @@ The various parts of the MakeCode Editor are labeled below:
 | 9    | Settings Button       | The settings button has many options for changing the project's settings. Extensions can be added from this button. The settings button also has options to delete the project or view different versions of the project. |
 | 10   | Sign In Button        | This button allows users to save projects on the cloud. MakeCode users can log in using Microsoft, Google, or Clever accounts. |
 | 11   | Undo and Redo Buttons | These buttons undo or redo the last actions. This can be useful if a mistake is made. |
-| 12   | Zoom Buttons          | The zoom buttons zoom in and out of the editor, making blocks larger or smaller on the screen. |
+| 12   | Zoom Buttons          | The zoom buttons allow users to zoom in and out of the editor, making blocks larger or smaller on the screen. |
 
 
 

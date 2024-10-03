@@ -226,8 +226,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-02-speaker.html">Using the Speaker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-03-temperature.html">Using the Temperature Sensor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-04-light.html">Using the Light Sensor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-05-compass.html">Using the Compass</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-06-microphone.html">Using the Microphone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lesson-02-onboard-components/04-lesson-05-microphone.html">Using the Microphone</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../lesson-02-onboard-components/05-lab.html">Lab: Building a Fidget Device</a></li>
@@ -479,7 +478,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -495,6 +496,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materials">Materials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -507,6 +518,40 @@ document.write(`
   <p><img alt="header-lesson-06" src="../../_images/header-lesson-06.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="lab-displaying-weather-station-data">
 <h1>Lab: Displaying Weather Station Data<a class="headerlink" href="#lab-displaying-weather-station-data" title="Link to this heading">#</a></h1>
+<section id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Link to this heading">#</a></h2>
+<p>In this lab, you will incorporate all the previous lessons to build a weather station that displays temperature, humidity, atmospheric pressure, wind speed, and the wind direction reading.</p>
+</section>
+<section id="materials">
+<h2>Materials<a class="headerlink" href="#materials" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>1 PC or Laptop</p></li>
+<li><p>1 BBC micro:bit</p></li>
+<li><p>1 SparkFun micro:climate Kit</p></li>
+<li><p>1 ELECFREAKS OLED display</p></li>
+</ul>
+</section>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Setup</strong>: Connect your BBC micro:bit to your PC or laptop using the Micro USB cable. Place it into the SparkFun weather:bit. Connect the ELECFREAKS OLED display to the weather:bit.</p></li>
+<li><p><strong>Programming Environment</strong>: Open the <a class="reference external" href="https://makecode.microbit.org/">MakeCode for micro:bit</a> programming environment on your PC or laptop.</p></li>
+<li><p><strong>Code Your Device</strong>: Using the SparkFun weather:bit and the micro:bit create a program that:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Measures the temperature</p></li>
+<li><p>Measures the humidity</p></li>
+<li><p>Measures the atmospheric pressure</p></li>
+<li><p>Measures the wind speed</p></li>
+<li><p>Measures the wind direcrion</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p><strong>Test Your Device</strong>: After you’ve written your code, download it to your micro:bit and test your code of the weather station. Write a brief report explaining your design process, how you coded your device, any challenges you faced, and how you overcame them.</p></li>
+<li><p><strong>Document Your Work</strong>: Take pictures of the weather station and the OLED screen with the measurements displayed.</p></li>
+<li><p><strong>Present Your Work</strong>: Prepare a short presentation to share your weather station with the class</p></li>
+<li><p><strong>Reflection</strong>: Write a brief report explaining the logic behind your code and how it results in an atmospheric sensing device.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -563,6 +608,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materials">Materials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -2,7 +2,7 @@
 
 # Using the Speaker
 
-This section will focus on the speaker or buzzer on the micro:bit to play a built-in melody. The speaker is more like a primitive speaker (a piezoelectric buzzer) on an old PC. It will not play the range of sounds a regular speaker will play, but it is works for most projects.
+This section will focus on the speaker or buzzer on the micro:bit to play a built-in melody. The speaker is more like a primitive speaker (a **piezoelectric buzzer**) on an old PC. It will not play the range of sounds a regular speaker will play, but it is works for most projects.
 
 ![microbit-buzzer](assets/microbit-buzzer.png)
 
@@ -30,5 +30,5 @@ In this example, `melody nyan` is selected.
 
 ![makecode-music-06](assets/makecode-music-06.png)
 
-The code is now ready to be flashed on the micro:bit.
+The micro:bit is now ready to be flashed with code. Press the download button to transfer the code to the micro:bit.
 

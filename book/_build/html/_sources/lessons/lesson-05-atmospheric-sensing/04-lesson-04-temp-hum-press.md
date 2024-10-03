@@ -4,7 +4,7 @@
 
 ## What is Celsius?
 
-Celsius is a way to measure temperature. It's named after a scientist named Anders Celsius. In Celsius, water freezes at 0 degrees and boils at 100 degrees. So, if it's 20 degrees Celsius outside, it's not too cold or too hot—it's just right for a lot of people. Scientists use Celsius because it's easy to understand and it's based on how water behaves at different temperatures. ●   In the United States, we use Fahrenheit for temperature. Compare and contrast the differences between Celsius and Fahrenheit in the image below. 
+Celsius is a way to measure temperature. It's named after a scientist named Anders Celsius. In Celsius, water freezes at 0 degrees and boils at 100 degrees. So, if it's 20 degrees Celsius outside, it's not too cold or too hot—it's just right for many people. Scientists use Celsius because it's easy to understand and it's based on how water behaves at different temperatures. In the United States, we use Fahrenheit for temperature. Compare and contrast the differences between Celsius and Fahrenheit in the image below. 
 
 ![c-f-examples](assets/c-f-examples.png)
 
@@ -192,8 +192,4 @@ The `pause` block uses milliseconds (ms) and 5 seconds is 5000 miliseconds.
 
 ![makecode-kitronik-aqb-temperature-37](assets/makecode-kitronik-aqb-temperature-37.png)
 
-The code is now ready to be flashed on the micro:bit.
-
-TODO:NOTE AND IMAGE ABOUT THE PROCESS LENGTHY PROCESS.
-
-<div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/#pub:S41590-25281-54010-62696" frameborder="0" sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe></div>
+The micro:bit is now ready to be flashed with code. Press the download button to transfer the code to the micro:bit.

@@ -10,11 +10,11 @@ Click on the `Basic` section of the Toolbox.
 
 ![makecode-first-program-01](assets/makecode-first-program-01.png)
 
-Select the `show string` block. A string is a group of characters that can include letters, numbers, symbols, and even spaces. Strings are mainly used to store text that people can read, like words and sentences. They help computer programs communicate information to the person using the program.
+Select the `show string` block. A string is a group of characters that can include letters, numbers, symbols, and even spaces. Strings are mainly used to store text people can read, like words and sentences. They help computer programs communicate information to the person using the program.
 
 ![makecode-first-program-02](assets/makecode-first-program-02.png)
 
-Drag the `show string` block into the `on start` block. Pay close attention to the shape of the blocks. They need to have the same shape to "click" together and make your code work correctly.
+Drag the `show string` block into the `on start` block. Pay close attention to the shape of the blocks. They need the same shape to "click" together and make your code work correctly.
 
 ![makecode-first-program-03](assets/makecode-first-program-03.gif)
 
@@ -32,7 +32,7 @@ Unused blocks can be selected and moved.
 
 ### Deleting Unused Blocks
 
-Unused blocks can be deleted by dragging them to the left and releasing them on the Toolbox where the purple trash can appears.
+Unused blocks can be deleted by dragging them to the left and releasing them on the Toolbox where the purple trash appears.
 
 ![makecode-first-program-05](assets/makecode-first-program-05.gif)
 
@@ -46,6 +46,7 @@ After the `show string` block is placed in the `on start` block, it can be downl
 
 ![makecode-first-program-07](assets/makecode-first-program-07.png)
 
-After the "Download" button is pressed it is downloaded to the micro:bit.
+After the "Download" button is pressed, it is downloaded to the micro:bit.
 
 ![makecode-first-program-08](assets/makecode-first-program-08.png)
+

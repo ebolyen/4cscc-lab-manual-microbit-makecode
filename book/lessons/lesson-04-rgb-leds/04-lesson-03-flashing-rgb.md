@@ -82,4 +82,4 @@ This example changes the color every `500` milliseconds or every half a second.
 
 ![makecode-rgb-led-18](assets/makecode-rgb-led-18.png)
 
-The program is now complete. The LED should alternate red, green, and blue every half a second.
+The micro:bit is now ready to be flashed with code. Press the download button to transfer the code to the micro:bit.

@@ -87,7 +87,7 @@ The alligator 3V pin is displayed below:
 
 ##### Alligator GND Pin
 
-The pin labeled `GND` is the **ground pin**. A ground pin is like the zero-point in an electrical circuit. It helps complete the circuit by giving the electricity a path to flow back to, making sure everything works correctly and safely in your project.
+The pin labeled `GND` is the **ground pin**. A ground pin is like the zero-point in an electrical circuit. It helps complete the circuit by giving the electricity a path to flow back to, ensuring everything works correctly and safely in your project.
 
 The alligator GND pin is displayed below: 
 
@@ -101,13 +101,13 @@ The other pins that are not labeled are only easily accessible using breakout bo
 
 ![microbit-breakout-boards](assets/microbit-breakout-boards.png)
 
-Some breakout boards are designed to work with components that have special connectors and some breakout boards are designed to work with breadboards (the breakout boards on the left).
+Some breakout boards are designed to work with components that have special connectors, and some are designed to work with breadboards (the breakout boards on the left).
 
 ---
 
 ##### Breakout Board GPIO Pins
 
-The breakout board GPIO pins are smaller than the pins that are designed to be connected with alligator clips. It is possible to make contact with these pins, but they are small and close together making a breakout board the best option when connecting these pins.
+The breakout board GPIO pins are smaller than the pins designed to be connected with alligator clips. It is possible to make contact with these pins, but they are small and close together, making a breakout board the best option when connecting them.
 
 The breakout board GPIO pins are displayed below:
 
@@ -117,7 +117,7 @@ The breakout board GPIO pins are displayed below:
 
 ##### Breakout Board 3v3 Pins
 
-The breakout 3v3 pin on the micro:bit provides a small amount of power, as it does with the alligator 3v3. Breakout boards often have access to 3v3 voltage pin that is always on. This pin is used to power sensors. These pins can also be used to check if LEDs are working correctly.
+The breakout 3v3 pin on the micro:bit provides a small amount of power, as with the alligator 3v3. Breakout boards often have access to 3v3 voltage pin that is always on. This pin is used to power sensors. These pins can also be used to check if LEDs are working correctly.
 
 ![microbit-breakout-3v3](assets/microbit-breakout-3v3.png)
 
@@ -125,14 +125,14 @@ The breakout 3v3 pin on the micro:bit provides a small amount of power, as it do
 
 ##### Breakout Board GND Pins
 
-The breakout board fuctions just as the alligator ground pins. These pins are used to complete the circuit. 
+The breakout board functions just as the alligator ground pins. These pins are used to complete the circuit. 
 ![microbit-breakout-gnd](assets/microbit-breakout-gnd.png)
 
 ---
 
 ###  The A and B Buttons
 
-The A and B buttons on the micro:bit are like simple controls that you can press to interact with your programs. You can program the micro:bit to do different things when you press these buttons, like showing a message on the LED screen, playing a sound, or starting a game.
+The A and B buttons on the micro:bit are like simple controls you can press to interact with your programs. You can program the micro:bit to do different things when you press these buttons, such as showing a message on the LED screen, playing a sound, or starting a game.
 
 ![microbit-buttons](assets/microbit-buttons.png)
 
@@ -164,7 +164,7 @@ The **accelerometer** on the micro:bit senses movement and can tell how fast and
 
 ### Temperature Sensor
 
-The micro:bit's temperature sensor measures how hot or cold it is around the device. It’s built into the **processor** (the micro:bit's brain), so it can quickly read temperature information, which can then use this data to display the temperature on the LED screen or respond to changes in temperature in your programs. This temperature sensor is accurate between ±4°C.
+The micro:bit's temperature sensor measures how hot or cold it is around the device. It’s built into the **processor** (the micro:bit's brain), so it can quickly read temperature information, which can then use this data to display the temperature on the LED screen or respond to changes in temperature in your programs. This temperature sensor is accurate between ±4°C. 
 
 ![microbit-processor](assets/microbit-processor.png)
 
@@ -210,7 +210,7 @@ The BLE antenna on the micro:bit allows it to communicate wirelessly with other 
 
 ## Non-Programmable Components
 
-There are several compnents that cannot be controlled using MakeCode blocks. The componets are necessary for the micro:bit to function properly. Tne non-programmable components are as follows:
+There are several components that cannot be controlled using MakeCode blocks. The components are necessary for the micro:bit to function properly. The non-programmable components are as follows:
 
 ---
 

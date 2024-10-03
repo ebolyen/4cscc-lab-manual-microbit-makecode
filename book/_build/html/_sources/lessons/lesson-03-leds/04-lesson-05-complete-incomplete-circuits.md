@@ -4,7 +4,7 @@
 
 ## Complete Circuit
 
-A **complete circuit** is like a full loop or pathway that allows electricity to flow from a power source through various lights, motors, or components (like and back to the power source. Imagine it as a circle where the electricity can travel around and around without any breaks. For example, if you connect a power source to a LED with wires in a complete loop, the LED will light up. 
+A **complete circuit** is like a full loop or pathway that allows electricity to flow from a power source through various lights, motors, or components (like and back to the power source). Imagine it as a circle where the electricity can travel around and around without any breaks. For example, if you connect a power source to a LED with wires in a complete loop, the LED will light up. 
 
 Here are some examples of complete circuits:
 

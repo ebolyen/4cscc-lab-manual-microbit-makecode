@@ -63,11 +63,7 @@ Type "Four Corners Science and Computing Club" in the empty string block. Run th
 
 ![makecode-kitronik-aqb-display-12](assets/makecode-kitronik-aqb-display-12.png)
 
-Notice how the text runs to the next line. 
-
-TODO: ADD PHOTO OF THE OUTPUT
-
-The micro:bit does not understand word boundaries. This means a word could be split between two lines, with part of it at the end of one line and the rest at the start of the next. To avoid this, it’s best to break up longer strings into multiple lines. You can duplicate the existing block to do this, as it's usually quicker than finding the block again in the Toolbox. 
+Notice how the text runs to the next line. The micro:bit does not understand word boundaries. This means a word could be split between two lines, with part of it at the end of one line and the rest at the start of the next. To avoid this, it’s best to break up longer strings into multiple lines. You can duplicate the existing block to do this, as it's usually quicker than finding the block again in the Toolbox. 
 
 There is no set character limit for the lines on the OLED, as some characters are wider than others. It is best to test your code for readability and modify it to be displayed as you intend it to be displayed.
 
@@ -97,9 +93,7 @@ Change the line `1` to line `2`.
 
 ![makecode-kitronik-aqb-display-19](assets/makecode-kitronik-aqb-display-19.png)
 
-The text is now displayed on two lines.
+The text will now be displayed on two lines. 
 
-<div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/#pub:S42841-02102-50736-79156" frameborder="0" sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe></div>
-
-TODO: ADD PHOTO OF THE NEW OUTPUT
+The micro:bit is now ready to be flashed with code. Press the download button to transfer the code to the micro:bit.
 

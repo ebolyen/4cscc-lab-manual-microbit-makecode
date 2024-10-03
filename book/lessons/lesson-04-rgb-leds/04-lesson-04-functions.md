@@ -108,4 +108,4 @@ Place the duplicated `pause` blocks after the `call` boxed.
 
 ![makecode-rgb-led-function-27](assets/makecode-rgb-led-function-27.png)
 
-The program is now complete. The LED should alternate red, green, and blue every half a second using functions. Now that you have defined red, blue and green, you can call on these functions in future codes you write.
+The micro:bit is now ready to be flashed with code. Press the download button to transfer the code to the micro:bit.

@@ -48,8 +48,7 @@ parts:
         - file: lessons/lesson-02-onboard-components/04-lesson-02-speaker
         - file: lessons/lesson-02-onboard-components/04-lesson-03-temperature
         - file: lessons/lesson-02-onboard-components/04-lesson-04-light
-        - file: lessons/lesson-02-onboard-components/04-lesson-05-compass
-        - file: lessons/lesson-02-onboard-components/04-lesson-06-microphone
+        - file: lessons/lesson-02-onboard-components/04-lesson-05-microphone
       - file: lessons/lesson-02-onboard-components/05-lab
       - file: lessons/lesson-02-onboard-components/06-vocabulary
       - file: lessons/lesson-02-onboard-components/07-resources

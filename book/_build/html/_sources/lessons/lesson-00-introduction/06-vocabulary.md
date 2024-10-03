@@ -6,9 +6,9 @@
 
 **breakout board**: a small accessory that makes it easier to connect extra parts, like sensors or lights, to the smaller pins on the micro:bit.
 
-**general-purpose input/output (GPIO)**: a set of pins on a computer or microcontroller that can be used to send or receive electrical signals to control various devices.
+**general-purpose input/output (GPIO)**: a set of pins on a computer or microcontroller that can send or receive electrical signals to control various devices.
 
-**ground pin**: a connection point in an electrical circuit that provides a return path for electric current, helping to complete the circuit and ensure proper operation of t he electronic components. It is essential for the stability and safety of the circuit.
+**ground pin**: a connection point in an electrical circuit that provides a return path for electric current, helping to complete the circuit and ensure proper operation of the electronic components. It is essential for the stability and safety of the circuit.
 
 **light-emitting diode (LED)**: a small electronic component that lights up when electricity flows through it.
 

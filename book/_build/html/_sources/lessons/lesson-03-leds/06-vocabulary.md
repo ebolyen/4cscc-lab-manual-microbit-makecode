@@ -8,7 +8,7 @@
 
 **cathode**: the negative terminal on an electronic component like a battery or an LED, where electricity flows out.
 
-**circuit**: 
+**circuit**: a path that electricity flows through. It usually includes a power source, like a battery, wires, and other components like lights or motors. For electricity to flow and make things work, the circuit must be complete, meaning all parts are connected.
 
 **complete circuit**: a closed loop that allows electricity to flow all the way around from a power source, through various components, and back to the power source.
 

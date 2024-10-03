@@ -22,7 +22,7 @@ Duplicate the `on button` block twice.
 
 ![makecode-buttons-04](assets/makecode-buttons-04.png)
 
-These blocks are not the same color as the other block, because they are the same. This means that they will be ignored unless you change the values in the dropdown menu.
+These blocks are not the same color as the other block, because they are the same. This means they will be ignored unless you change the values in the dropdown menu.
 
 ![makecode-buttons-05](assets/makecode-buttons-05.png)
 
@@ -34,7 +34,7 @@ Click on the arrow on the dropdown menu on one of the duplicated blocks and chan
 
 ![makecode-buttons-07](assets/makecode-buttons-07.png)
 
-The block changes colors and wilpl not be ignored.
+The block changes colors and will not be ignored.
 
 ![makecode-buttons-08](assets/makecode-buttons-08.png)
 
@@ -82,15 +82,15 @@ In this example, the happy face icon will display when button B is pressed.
 
 ![makecode-buttons-21](assets/makecode-buttons-21.png)
 
-You need one more action for your remaining block. Click on the "Basic" drawer in the Toolbox again.
+For your remaining block, you need to take one more action. To do so, click on the "Basic" drawer in the Toolbox again.
 
 ![makecode-buttons-22](assets/makecode-buttons-22.png)
 
-This time we will display a custom image. Choose the `show leds` block.
+This time, we will display a custom image. Choose the `show leds` block.
 
 ![makecode-buttons-23](assets/makecode-buttons-23.png)
 
-Place the `show leds` block in the remaining block. In this example the custom image will be displayed when buttons A and B are pressed at the same time.
+Place the `show leds` block in the remaining block. In this example, the custom image will be displayed when buttons A and B are pressed simultaneously.
 
 ![makecode-buttons-24](assets/makecode-buttons-24.png)
 
@@ -98,5 +98,5 @@ Design your custom image.
 
 ![makecode-buttons-25](assets/makecode-buttons-25.png)
 
-The code is now ready to be flashed on the micro:bit.
+The micro:bit is now ready to be flashed with code. Press the download button to transfer the code to the micro:bit.
 

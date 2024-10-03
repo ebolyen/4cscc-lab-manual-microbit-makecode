@@ -87,6 +87,4 @@ The program is now complete. The LED should be turning on and off every second.
 
 Try experimenting with different blink rates by changing the value in the `delay` block.
 
-A complete project can be opened below:
-
-<div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/#pub:S26992-28437-70952-61986" frameborder="0" sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe></div>
+The micro:bit is now ready to be flashed with code. Press the download button to transfer the code to the micro:bit.

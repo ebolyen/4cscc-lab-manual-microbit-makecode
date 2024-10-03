@@ -66,6 +66,4 @@ The program is now complete, and button `A` should turn the LED off and button `
 
 Try switching the values so button `A` turns the LED on and button `B` turns the LED off.
 
-A complete project can be opened below:
-
-<div style="position:relative;height:0;padding-bottom:70%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/#pub:S98260-52711-92823-36690" frameborder="0" sandbox="allow-popups allow-forms allow-scripts allow-same-origin"></iframe></div>
+The micro:bit is now ready to be flashed with code. Press the download button to transfer the code to the micro:bit.

@@ -64,17 +64,27 @@ Place the `join` block in the `show string` block.
 
 ![makecode-weatherbit-ws-wd-15](assets/makecode-weatherbit-ws-wd-15.png)
 
-Select
+Select the text in the `join` block.
 
 ![makecode-weatherbit-ws-wd-16](assets/makecode-weatherbit-ws-wd-16.png)
 
+Delete the text "Hello" in the first oval, and delete "World" in the second oval.
+
 ![makecode-weatherbit-ws-wd-17](assets/makecode-weatherbit-ws-wd-17.png)
+
+Duplicate the `show string` block.
 
 ![makecode-weatherbit-ws-wd-18](assets/makecode-weatherbit-ws-wd-18.png)
 
+Select the duplicated `show string` block.
+
 ![makecode-weatherbit-ws-wd-19](assets/makecode-weatherbit-ws-wd-19.png)
 
+Place the block in the `forever` block below the other block as displayed below:
+
 ![makecode-weatherbit-ws-wd-20](assets/makecode-weatherbit-ws-wd-20.png)
+
+
 
 ![makecode-weatherbit-ws-wd-21](assets/makecode-weatherbit-ws-wd-21.png)
 

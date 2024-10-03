@@ -34,4 +34,4 @@ Place the `sound level` block in the `forever` block.
 
 ![makecode-sound-07](assets/makecode-sound-07.png)
 
-The code is now ready to be flashed on the micro:bit.
+The micro:bit is now ready to be flashed with code. Press the download button to transfer the code to the micro:bit.
